@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Garra</title>
+    <link rel="stylesheet" href="serviços.css">
+    <link rel="icon" href="./src/img/logopagina.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="./src/img/logo.PNG" class="img-logo" alt="logo-da-empresa">
+        <nav class="nav-bar">
+            <a href="index.html" data-aos="fade-down">Home</a>
+            <a href="./src/img/Portfólio de Produtos final.pdf" download data-aos="fade-down">Download Portifolio Completo</a>
+        </nav>
+    </header>
+
+    <div class="filtros">
+        <button class="ativo" data-filtro="todos">Todos</button>
+        <button data-filtro="lactacao">Lactação</button>
+        <button data-filtro="preparto">Pré-Parto</button>
+        <button data-filtro="recria">Recria</button>
+        <button data-filtro="outros">Outras Espécies</button>
+    </div>
+
+    <div class="produtos">
+        <div class="product-card lactacao">
+            <img src="./src/img/produtogarra.JPG" alt="Produto">
+            <div class="card-info">
+                <h3>Núcleo Garra <span> Lac Essencial</span></h3>
+                <ul>
+                    <li>Lactação</li>
+                    <li>Consumo: 300 gramas</li>
+                    <li>Vitaminas: A, D, E</li>
+                </ul>
+                <button onclick="abrirModal('modal1')">Ver Especificações</button>
+            </div>
+        </div>
+
+        <div class="product-card lactacao">
+            <img src="./src/img/produtogarra.JPG" alt="Produto">
+            <div class="card-info">
+                <h3>Núcleo Garra <span>Lac Desempenho</span></h3>
+                <ul>
+                    <li>Lactação</li>
+                    <li>Consumo: 500 a 600 gramas</li>
+                    <li>Vitaminas: A, D, E</li>
+                </ul>
+                <button onclick="abrirModal('modal1')">Ver Especificações</button>
+            </div>
+        </div>
+
+        <div class="product-card lactacao">
+            <img src="./src/img/produtogarra.JPG" alt="Produto">
+            <div class="card-info">
+                <h3>Núcleo Garra <span>Lac Extreme </span> </h3>
+                <ul>
+                    <li>Lactação</li>
+                    <li>Consumo: 700 gramas</li>
+                    <li>Vitaminas: A, D, E</li>
+                </ul>
+                <button onclick="abrirModal('modal1')">Ver Especificações</button>
+            </div>
+        </div>
+
+
+        <div class="product-card preparto">
+            <img src="./src/img/produtogarra.JPG" alt="Produto">
+            <div class="card-info">
+                <h3 class="prep">Núcleo Garra <span>Pré-Parto Extreme</span> </h3>
+                <ul>
+                    <li>Pré-Parto</li>
+                    <li>Consumo: 550g/dia</li>
+                    <li>Vitaminas: A, D, E</li>
+                </ul>
+                <button onclick="abrirModal('modal2')">Ver Especificações</button>
+            </div>
+        </div>
+
+        <div class="product-card preparto">
+            <img src="./src/img/produtogarra.JPG" alt="Produto">
+            <div class="card-info">
+                <h3 class="prep">Núcleo Garra <span>Vacas Secas</span></h3>
+                <ul>
+                    <li>Vacas Secas</li>
+                    <li>Consumo: 150 gramas</li>
+                    <li>Vitaminas: A, D, E</li>
+                </ul>
+                <button onclick="abrirModal('modal2')">Ver Especificações</button>
+            </div>
+        </div>
+
+        <div class="product-card recria">
+            <img src="./src/img/produtogarra.JPG" alt="Produto">
+            <div class="card-info">
+                <h3>Prolac Start 22</h3>
+                <ul>
+                    <li>Recria</li>
+                    <li>Vitaminas: Com vitaminas do complexo B</li>
+                </ul>
+                <button onclick="abrirModal('modal3')">Ver Especificações</button>
+            </div>
+        </div>
+
+        <div class="product-card recria">
+            <img src="./src/img/produtogarra.JPG" alt="Produto">
+            <div class="card-info">
+                <h3>Núcleo Garra Crescimento</h3>
+                <ul>
+                    <li>Recria</li>
+                    <li>Vitaminas: A, D, E</li>
+                </ul>
+                <button onclick="abrirModal('modal3')">Ver Especificações</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal1')">&times;</span>
+            <h2>Núcleo Garra Lac Extreme</h2>
+            <p><strong>Aditivos:</strong> Monensina, Levedura, Biotina, Nexulin, DigestUP</p>
+            <p><strong>Consumo:</strong> 700g/dia</p>
+            <p><strong>Vitaminas:</strong> A: 114.285 UI/kg | D: 46.428 UI | E: 857 UI</p>
+            <p><strong>Minerais:</strong> Zn: 1.428mg | Mn: 714mg | Cu: 357mg</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal2')">&times;</span>
+            <h2>Núcleo Garra Pré-Parto Extreme</h2>
+            <p><strong>Aditivos:</strong> Monensina, Micotoxinas, Cloreto de Cálcio Microencapsulado</p>
+            <p><strong>Consumo:</strong> 550g/dia</p>
+            <p><strong>Vitaminas:</strong> A: 200.000 UI | D: 50.000 UI | E: 5.500 UI</p>
+            <p><strong>Minerais:</strong> Zn: 900mg | Mn: 700mg | Cu: 300mg</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modal3')">&times;</span>
+            <h2>Prolac Start 22</h2>
+            <p><strong>Aditivos:</strong> Probiótico, Levedura, Biotina, Sangrovit</p>
+            <p><strong>Composição:</strong> Milho, Aveia, Minerais Orgânicos</p>
+            <p><strong>Vitaminas:</strong> A: 4.800 UI | B1: 2mg | B2: 4,5mg | B12: 24mcg</p>
+        </div>
+    </div>
+
+    <footer>
+        “A vontade de se preparar precisa ser maior que a vontade de vencer. Vencer será consequência da boa
+        preparação.”
+    </footer>
+
+    <script src="./produtos.js"></script>
+</body>
