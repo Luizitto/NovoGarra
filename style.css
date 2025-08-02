@@ -27,7 +27,7 @@ header {
     min-height: 60px;
     width: 100%;
     z-index: 3;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #808080;
 }
 
 .img-logo {
@@ -45,7 +45,7 @@ header {
 
 nav a {
     position: relative;
-    color: gray;
+    color: #808080;
     font-size: 14px;
     right: 10px;
     font-weight: bold;
@@ -96,7 +96,7 @@ nav a:hover {
     width: 50vw;
 }
 
-.cont-video button {
+.link-c-video {
     font-size: 14px;
     width: 200px;
     height: auto;
@@ -108,14 +108,15 @@ nav a:hover {
     background-color: #8ebe1e;
     color: white;
     transition: all 0.4s ease;
+    text-align: center;
 }
 
-.cont-video button:hover {
+.link-c-video:hover {
     opacity: 80%;
     transform: translateY(-8px)
 }
 
-.cont-video button:active {
+.link-c-video:active {
     opacity: 50%;
 }
 
@@ -142,7 +143,8 @@ nav a:hover {
 
 h1 span,
 .txt-main span,
-.span-serviços {
+.span-serviços,
+.nossos-produtos span {
     color: #8ebe1e;
 }
 
@@ -190,9 +192,7 @@ main .div-sobre-nos {
     height: 100%;
     padding-top: 70px;
     padding-bottom: 50px;
-    background-color: rgba(102 102 102 / 9%);
-    ;
-
+    background: linear-gradient(to left top, #ecececd3, #d0d1d5);
 }
 
 .tipos-serviços {
@@ -232,3 +232,63 @@ main .div-sobre-nos {
     margin-top: 20px;
 }
 
+.nossos-produtos {
+    min-height: 100vh;
+    background-color: white;
+    padding: 40px;
+}
+
+.nossos-produtos>h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.linha-de-produtos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.img-produto {
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.conteudo-produto {
+    max-width: 500px;
+}
+
+.conteudo-produto h2 {
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+.conteudo-produto p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-produto {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #537755;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.botao-produto:hover {
+    opacity: 80%;
+    transform: translateY(-8px)
+}
+
+.botao-produto:active {
+    opacity: 50%;
+}

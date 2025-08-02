@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" href="./src/img/logopagina.PNG" type="image/x-icon">
     <link rel="stylesheet" href="equipe.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="footer.css">
 
 
 </head>
@@ -35,28 +37,26 @@
             <a href="#home" data-aos="fade-down">Home</a>
             <a href="#sobre-nos" data-aos="fade-down">Sobre nos</a>
             <a href="#serviços" data-aos="fade-down">Nossos Serviços</a>
-            <a href="produtos.html" data-aos="fade-down">Nossos Produtos</a>
+            <a href="#produtos" data-aos="fade-down">Nossos Produtos</a>
             <a href="#nossaequipe" data-aos="fade-down">Nossa Equipe</a>
-            <a href="" data-aos="fade-down">Nossos Parceiros</a>
-            <a href="" data-aos="fade-down">Contate-nos</a>
+            <a href="#Contate-nos" data-aos="fade-down">Contate-nos</a>
         </nav>
     </header>
     <section class="s-video" id="home">
         <video src="./src/video/video.mp4" autoplay muted loop></video>
         <div class="cont-video" data-aos="fade-down-right">
             <h1 class="txt-video">Garra <span>Nutrição</span></h1>
-            <p class="prf-video">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut magnam id, itaque
-                dolorum, eius debitis
-                consectetur dolor ducimus error vero eaque architecto tenetur omnis et harum laudantium repudiandae
-                sapiente. Id?</p>
+            <p class="prf-video">Impulsionamos os resultados dos nossos clientes com alta performance, comprometimento
+                com as pessoas e confiabilidade.
+                Juntos Avançamos!</p>
 
-            <button>Contate-nos</button>
+            <a href="#contato" class="link-c-video">Contate-nos</a>
 
         </div>
     </section>
 
     <a class="link-zap"
-        href="https://wa.me/5535999945330?text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20queria%20fazer%20um%20or%C3%A7amento%20com%20voce!%20">
+        href="https://api.whatsapp.com/send?phone=5531995981646&text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Garra%21%20">
         <img src="./src/img/iwhatsapp.png">
     </a>
 
@@ -148,6 +148,23 @@
         </section>
     </section>
 
+    <section class="nossos-produtos" id="produtos">
+        <h2>Nossos <span>Produtos</span> </h2>
+        <div class="linha-de-produtos">
+            <img src="./src/img/produtogarra.JPG" class="img-produto" data-aos="fade-right">
+
+            <div class="conteudo-produto" data-aos="fade-left">
+                <h2>Conheça nossa linha completa</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, distinctio obcaecati expedita
+                    tenetur
+                    magnam veniam aut libero ex dolores et, nam iure itaque iste laboriosam. Dolores minima ad
+                    consectetur
+                    cum.
+                </p>
+                <a class="botao-produto" href="./produtos.html">Clique Aqui</a>
+            </div>
+        </div>
+    </section>
     <section class="nossa-equipe" id="nossaequipe">
         <div class="conteudo-equipe" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <h2 class="titulo-secao">Conheça <span>Nossa Equipe</span></h2>
@@ -207,13 +224,140 @@
             <p class="descricao-equipe" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                 Somos uma equipe apaixonada por nutrição, saúde e bem-estar. Cada membro do nosso time traz experiência
                 e
-                dedicação para oferecer o melhor atendimento e orientação para você. Confira abaixo quem faz parte da
-                nossa
-                jornada:
+                dedicação para oferecer o melhor atendimento e orientação para você.
             </p>
-
         </div>
     </section>
+
+    <section class="social">
+        <div class="instragram">
+            <div class="embedsocial-hashtag" data-ref="f2b0d5e0dcfc6e8bf29951547092c978de5f1517"> <a
+                    class="feed-powered-by-es feed-powered-by-es-feed-img es-widget-branding"
+                    href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Instagram widget">
+                    <img src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial">
+                    <div class="es-widget-branding-text">Instagram widget</div>
+                </a> </div>
+            <script> (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+        </div>
+    </section>
+    <section class="contato-container" id="Contate-nos">
+        <div class="info-contato" id="contato">
+            <h2>Entre em contato</h2>
+            <p>Preencha o formulário ao lado e entraremos em contato com você o mais rápido possível.</p>
+
+            <a href="tel:+5535999945330">
+                <div class="item-contato">
+                    <img src="./src/img/icontelefone.png" alt="Telefone" />
+                    <div>
+                        <strong>Telefone</strong>
+                        <p>(31) 99598-1646</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://maps.app.goo.gl/NPJHrxS9PsfUNRsy6">
+                <div class="item-contato">
+                    <img src="/src/img/iconlocalizacao.png" alt="Localização" />
+                    <div>
+                        <strong>Localização</strong>
+                        <p>R. dos Bariris, 662 - Jardim Italia, Passos - MG, 37901-515</p>
+                    </div>
+                </div>
+            </a>
+            <a href="mailto:luizvilela456@gmail.com">
+                <div class="item-contato">
+                    <img src="./src/img/iconemail.png" alt="E-mail" />
+                    <div>
+                        <strong>E-mail</strong>
+                        <p>email@gmail.com</p>
+                    </div>
+                </div>
+            </a>
+
+            <a
+                href="https://api.whatsapp.com/send?phone=5531995981646&text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Garra%21%20">
+                <div class="item-contato">
+                    <img src="./src/img/iconwths.png" alt="WhatsApp" />
+                    <div>
+                        <strong>Whatsapp</strong>
+                        <p>(31) 99598-1646</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <form class="form-contato">
+            <h2>Contatar</h2>
+            <div class="linha">
+                <input type="text" placeholder="Nome" required />
+                <input type="email" placeholder="E-mail" required />
+            </div>
+            <input type="text" placeholder="Assunto" required />
+            <textarea placeholder="Mensagem" rows="5" required></textarea>
+            <button class="b-enviar" type="submit">Enviar mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <div id="footer_content">
+            <div class="f-texto">
+                <h2>Garra Nutricional</h2>
+                <p>Juntos Avançamos!</p>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Site</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Home</a>
+                </li>
+                <li>
+                    <a href="#sobre-nos" class="footer-link">Sobre nos</a>
+                </li>
+                <li>
+                    <a href="#serviços" class="footer-link">Serviços</a>
+                </li>
+                <li>
+                    <a href="#nossaequipe" class="footer-link">Equipe</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Products</h3>
+                </li>
+                <li>
+                    <a href="#produtos" class="footer-link">Produtos</a>
+                </li>
+                <li>
+                    <a href="./produtos.html" class="footer-link">Linha Garra</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Horario de funcionamento</h3>
+                <p>
+                    08:00 às 20:00 - Segunda á Sábado, horário de Brasília (exceto Domingo e feriados)
+                </p>
+                <a href="https://maps.app.goo.gl/NPJHrxS9PsfUNRsy6">R. dos Bariris, 662 - Jardim Italia, Passos - MG,
+                    37901-515</a>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2025 Garra Nutrição Animail
+            Todos os Direitos Reservados
+        </div>
+
+        <div class="devcreat">
+            <a href="https://www.instagram.com/dev_luizvilela/">Developer Luiz Vilela</a>
+        </div>
+    </footer>
+
+
+
+
     <script src="./equipe.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
