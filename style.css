@@ -20,7 +20,7 @@ body {
 
 header {
     display: flex;
-    position: fixed;
+    /*position: fixed;*/
     justify-content: flex-end;
     align-items: center;
     background-color: white;
@@ -28,19 +28,28 @@ header {
     width: 100%;
     z-index: 3;
     border-bottom: 1px solid #808080;
+    position: relative;
+    padding: 1rem;
+}
+
+#menu-hambuguer {
+    display: none;
+    width: 30px;
+    cursor: pointer;
 }
 
 .img-logo {
     position: absolute;
-    width: 130px;
-    left: 50px;
+    width: 159px;
+    left: 1rem;
     border-radius: 5px;
 }
 
 .nav-bar {
-    justify-content: center;
     display: flex;
     gap: 20px;
+    position: relative;
+    right: 1rem;
 }
 
 nav a {
@@ -141,9 +150,13 @@ nav a:hover {
     }
 }
 
-h1 span,
-.txt-main span,
-.span-serviços,
+h1 span {
+    color: #8ebe1e;
+
+}
+
+h2.txt-main span,
+.span-serviços span,
 .nossos-produtos span {
     color: #8ebe1e;
 }
@@ -218,6 +231,10 @@ main .div-sobre-nos {
     box-shadow: 0px 2px 5px 3px rgba(102, 102, 102, 0.2);
     margin-top: 15px;
     background-color: white;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
 }
 
 .title-chek:hover {

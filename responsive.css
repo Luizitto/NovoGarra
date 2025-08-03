@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#menu-hambuguer {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+    video,
+    .cont-video p,
+    .link-c-video {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        height: 100%;
+    }
+
+
+    main img {
+        width: 100%;
+        height: auto;
+        border-radius: 35px;
+        margin-top: 4%;
+        box-shadow: 5px 5px 5px #00000036;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        text-align: center;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    #menu-hambuguer {
+        display: block;
+        position: relative;
+        right: 1rem;
+    }
+
+    .img-do-produto-garra {
+        width: 100%;
+    }
+
+
+    link-zap img {
+        height: 60px;
+        right: 20px;
+        position: fixed;
+        bottom: 20px;
+        z-index: 2;
+        animation: bounce-whatsapp 2s infinite;
+    }
+
+    @keyframes bounce-whatsapp {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+
+}
+
+@media (max-width: 880px) {
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+
+    }
+}
+
+@media (max-width: 660px) {
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+
+    }
+}
+
+@media (max-width: 550px) {
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+
+    }
+}

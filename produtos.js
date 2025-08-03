@@ -27,3 +27,17 @@ window.onclick = function (event) {
         event.target.style.display = 'none';
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menu-hambuguer");
+    const menuHeader = document.querySelector(".nav-bar");
+
+    menuButton.addEventListener("click", function () {
+        if (menuHeader.style.display === "flex") {
+            menuHeader.style.display = "none";
+        } else {
+            menuHeader.style.display = "flex";
+        }
+    });
+});
