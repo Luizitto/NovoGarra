@@ -129,6 +129,10 @@ nav a:hover {
     opacity: 50%;
 }
 
+.titulos-serviços {
+    margin-bottom: 10px;
+}
+
 .link-zap img {
     height: 60px;
     right: 20px;
