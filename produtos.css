@@ -177,6 +177,7 @@ footer {
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
+
 }
 
 .close {
@@ -196,3 +197,34 @@ footer {
 }
 
 
+.textomodal {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exp-modal strong {
+    color: #8ebe1e;
+}
+
+.exp-modal {
+    margin-bottom: 10px;
+}
+
+.linkmodal {
+    width: 100px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #8ebe1e;
+    color: white;
+    transition: all 0.2s linear;
+
+}
+
+.linkmodal:hover {
+    opacity: 70%;
+}
