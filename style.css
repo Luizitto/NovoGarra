@@ -20,7 +20,7 @@ body {
 
 header {
     display: flex;
-    /*position: fixed;*/
+    position: fixed;
     justify-content: flex-end;
     align-items: center;
     background-color: white;
@@ -28,8 +28,20 @@ header {
     width: 100%;
     z-index: 3;
     border-bottom: 1px solid #808080;
-    position: relative;
     padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s, opacity 0.3s;
+}
+
+.header-hide {
+    top: -100px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header-opacity {
+    opacity: 0.9;
+    transition: all 0.8s ease;
 }
 
 #menu-hambuguer {
@@ -118,6 +130,7 @@ nav a:hover {
     color: white;
     transition: all 0.4s ease;
     text-align: center;
+    box-shadow: 0 4px 16px 0 rgba(142, 190, 30, 0.4), 0 1.5px 4px 0 rgba(0, 0, 0, 0.12);
 }
 
 .link-c-video:hover {
@@ -140,6 +153,15 @@ nav a:hover {
     bottom: 20px;
     z-index: 2;
     animation: bounce-whatsapp 2s infinite;
+    cursor: pointer;
+    box-shadow: 0 4px 16px 0 rgba(142, 190, 30, 0.5), 0 1.5px 4px 0 rgba(0, 0, 0, 0.18);
+    background: transparent;
+    border-radius: 50%;
+    transition: box-shadow 0.3s;
+}
+
+.link-zap img:hover {
+    box-shadow: 0 8px 32px 0 rgba(142, 190, 30, 0.7), 0 3px 8px 0 rgba(0, 0, 0, 0.22);
 }
 
 @keyframes bounce-whatsapp {

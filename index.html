@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,9 @@
 <body>
 
     <header>
+
         <img src="./src/img/logo.PNG" class="img-logo" alt="logo-da-empresa">
+
         <img src="./src/img/icon-menu.png" id="menu-hambuguer" alt="icone-menu">
         <nav class="nav-bar">
             <a href="#home" data-aos="fade-down">Home</a>
@@ -58,7 +60,7 @@
 
     <a class="link-zap"
         href="https://api.whatsapp.com/send?phone=5531995981646&text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Garra%21%20">
-        <img src="./src/img/iwhatsapp.png">
+        <img src="./src/img/iwhatsapp.png" alt="icone-whatsapp" />
     </a>
 
     <main id="sobre-nos">
@@ -90,7 +92,6 @@
         <section class="texto-box-serviços">
             <div>
                 <h2 class="text-garra">Porque trabalhar com a <span>GARRA?</span></h2>
-                <h2 class="texto-efetivo"></h2>"A VONTADE DE SE PREPARAR PRECISA SER MAIOR DOQUE A VONTADE DE VENCER!"
                 </h2>
             </div>
         </section>
@@ -152,7 +153,8 @@
     <section class="nossos-produtos" id="produtos">
         <h2>Nossos <span>Produtos</span> </h2>
         <div class="linha-de-produtos">
-            <img src="./src/img/produtogarra.JPG" class="img-do-produto-garra" data-aos="fade-right">
+            <img src="./src/img/produtogarra.JPG" class="img-do-produto-garra" data-aos="fade-right"
+                alt="imagem-do-produto">
 
             <div class="conteudo-produto" data-aos="fade-right">
                 <h2>Conheça nossa linha completa</h2>
@@ -208,20 +210,8 @@
                             <h2>Tiago Escarce</h2>
                             <span>Sales Manage</span>
                         </li>
-                        <li class="card">
-                            <div class="img"><img src="./src/img/equipeLuanda.jpg" alt="img-funcionario-profissional"
-                                    draggable="false">
-                            </div>
-                            <h2>Luanda Escarce</h2>
-                            <span>Sales Manage</span>
-                        </li>
-                        <li class="card">
-                            <div class="img"><img src="./src/img/equipeTiago.jpg" alt="img-funcionario-profissional"
-                                    draggable="false">
-                            </div>
-                            <h2>Tiago Escarce</h2>
-                            <span>Sales Manage</span>
-                        </li>
+
+                    </ul>
 
                 </div>
             </div>
@@ -301,12 +291,12 @@
             <button class="b-enviar" type="submit">Enviar mensagem</button>
         </form>
     </section>
-    
+
 
     <footer>
         <div id="footer_content">
             <div class="f-texto">
-                <h2>Garra Nutricional</h2>
+                <h2>Garra Nutrição Animal</h2>
                 <p>Juntos Avançamos!</p>
             </div>
 
@@ -340,7 +330,7 @@
                 </li>
             </ul>
 
-            <div id="footer_subscribe">
+            <div id="footer_subscribe" class="footer-list">
                 <h3>Horario de funcionamento</h3>
                 <p>
                     08:00 às 20:00 - Segunda á Sábado, horário de Brasília (exceto Domingo e feriados)
@@ -351,7 +341,7 @@
         </div>
 
         <div id="footer_copyright">
-            &#169
+            &#169;
             2025 Garra Nutrição Animal
             Todos os Direitos Reservados
         </div>
@@ -370,6 +360,31 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('header-hide', 'header-opacity');
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                // Rolando para baixo
+                header.classList.add('header-hide');
+                header.classList.remove('header-opacity');
+            } else {
+                // Rolando para cima
+                header.classList.remove('header-hide');
+                header.classList.add('header-opacity');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+
 </body>
 
 </html>

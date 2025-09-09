@@ -13,9 +13,6 @@
     box-sizing: border-box;
 }
 
-main {
-    height: 80vh;
-}
 
 footer {
     width: 100%;
@@ -129,6 +126,23 @@ footer {
     background-color: var(--color-neutral-0);
     font-size: 0.9rem;
     padding: 10px;
+    color: white;
+}
+
+.f-texto h2, 
+.f-texto p{
+    color: white;
+    cursor: pointer;
+    transition: all 0.6s;
+
+}
+
+.footer-list h3{
+    color: white;
+}
+
+.footer_subscribe h3{
+    text-decoration: underline;
     color: white;
 }
 
