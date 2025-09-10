@@ -53,7 +53,7 @@
                 com as pessoas e confiabilidade.
                 Juntos Avançamos!</p>
 
-            <a href="#contato" class="link-c-video">Contate-nos</a>
+            <a href="#contate-nos" class="link-c-video">Contate-nos</a>
 
         </div>
     </section>
@@ -88,13 +88,9 @@
     <section class="nossos-serviços" id="serviços">
         <div class="txt-serviços">
             <h2 class="span-serviços"><span>Nossos</span> Serviços</h2>
+
+            <h3 class="text-garra">Porque trabalhar com a <span>GARRA?</span></h3>
         </div>
-        <section class="texto-box-serviços">
-            <div>
-                <h2 class="text-garra">Porque trabalhar com a <span>GARRA?</span></h2>
-                </h2>
-            </div>
-        </section>
         <section class="tipos-serviços">
             <div class="chek-box1">
                 <div class="title-chek" data-aos="fade-right">
@@ -157,7 +153,7 @@
                 alt="imagem-do-produto">
 
             <div class="conteudo-produto" data-aos="fade-right">
-                <h2>Conheça nossa linha completa</h2>
+                <h3>Conheça nossa linha completa</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, distinctio obcaecati expedita
                     tenetur
                     magnam veniam aut libero ex dolores et, nam iure itaque iste laboriosam. Dolores minima ad
@@ -176,38 +172,38 @@
 
                     <ul class="carousel">
                         <li class="card">
-                            <div class="img"><img src="./src/img/equipeAna.jpg" alt="img-funcionario-profissional"
-                                    draggable="false">
-                            </div>
-                            <h2>Ana Flavia</h2>
-                            <span>Sales Manage</span>
-                        </li>
-                        <li class="card">
                             <div class="img"><img src="./src/img/equipeDaniel.jpg" alt="img-funcionario-profissional"
                                     draggable="false">
                             </div>
-                            <h2>Daniel Escarce</h2>
+                            <p>Daniel Escarce</p>
                             <span>Sales Manage</span>
                         </li>
                         <li class="card">
-                            <div class="img"><img src="./src/img/equipeFernanda.jpg" alt="img-funcionario-profissional"
+                            <div class="img"><img src="./src/img/equipeTiago.jpg" alt=img-funcionario-profissional"
                                     draggable="false">
                             </div>
-                            <h2>Fernanda Silva</h2>
+                            <p>Thiago Escarce</p>
                             <span>Sales Manage</span>
                         </li>
                         <li class="card">
                             <div class="img"><img src="./src/img/equipeLuanda.jpg" alt="img-funcionario-profissional"
                                     draggable="false">
                             </div>
-                            <h2>Luanda Escarce</h2>
+                            <p>Luanda Escarce</p>
                             <span>Sales Manage</span>
                         </li>
                         <li class="card">
-                            <div class="img"><img src="./src/img/equipeTiago.jpg" alt="img-funcionario-profissional"
+                            <div class="img"><img src="./src/img/equipeFernanda.jpg" alt=img-funcionario-profissional"
                                     draggable="false">
                             </div>
-                            <h2>Tiago Escarce</h2>
+                            <p>Fernanda Silva</p>
+                            <span>Sales Manage</span>
+                        </li>
+                        <li class="card">
+                            <div class="img"><img src="./src/img/equipeAna.jpg" alt="img-funcionario-profissional"
+                                    draggable="false">
+                            </div>
+                            <p>Ana Flavia</p>
                             <span>Sales Manage</span>
                         </li>
 
@@ -240,18 +236,18 @@
             <h2>Entre em contato</h2>
             <p>Preencha o formulário ao lado e entraremos em contato com você o mais rápido possível.</p>
 
-            <a href="tel:+5535999945330">
+            <a href="tel:+5531995981646">
                 <div class="item-contato">
                     <img src="./src/img/icontelefone.png" alt="Telefone" />
                     <div>
                         <strong>Telefone</strong>
-                        <p>(31) 99598-1646</p>
+                        <p>(31) 9 9598-1646</p>
                     </div>
                 </div>
             </a>
             <a href="https://maps.app.goo.gl/NPJHrxS9PsfUNRsy6">
                 <div class="item-contato">
-                    <img src="/src/img/iconlocalizacao.png" alt="Localização" />
+                    <img src="./src/img/iconlocalizacao.png" alt="Localização" />
                     <div>
                         <strong>Localização</strong>
                         <p>R. dos Bariris, 662 - Jardim Italia, Passos - MG, 37901-515</p>
@@ -274,20 +270,21 @@
                     <img src="./src/img/iconwths.png" alt="WhatsApp" />
                     <div>
                         <strong>Whatsapp</strong>
-                        <p>(31) 99598-1646</p>
+                        <p>(31) 9 9598-1646</p>
                     </div>
                 </div>
             </a>
         </div>
 
         <form class="form-contato" action="https://formspree.io/f/mdkdyawq" method="post">
-            <h2>Contatar</h2>
+            <h3>Contatar</h3>
             <div class="linha">
-                <input type="text" placeholder="Nome" required />
-                <input type="email" placeholder="E-mail" required />
+                <input type="text" name="nome" placeholder="Nome" required />
+                <input type="email" name="email" placeholder="E-mail" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Digite um e-mail válido" />
             </div>
-            <input type="text" placeholder="Assunto" required />
-            <textarea placeholder="Mensagem" rows="5" required></textarea>
+            <input type="text" name="assunto" placeholder="Assunto" required />
+            <textarea name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
             <button class="b-enviar" type="submit">Enviar mensagem</button>
         </form>
     </section>
@@ -333,7 +330,7 @@
             <div id="footer_subscribe" class="footer-list">
                 <h3>Horario de funcionamento</h3>
                 <p>
-                    08:00 às 20:00 - Segunda á Sábado, horário de Brasília (exceto Domingo e feriados)
+                    08:00 às 18:00 - Segunda á Sexta, horário de Brasília
                 </p>
                 <a href="https://maps.app.goo.gl/NPJHrxS9PsfUNRsy6">R. dos Bariris, 662 - Jardim Italia, Passos - MG,
                     37901-515</a>
@@ -355,36 +352,12 @@
 
 
     <script src="./equipe.js"></script>
+    <script src="./script.js"></script>
     <script src="./produtos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script>
-        let lastScroll = 0;
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', function () {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll <= 0) {
-                header.classList.remove('header-hide', 'header-opacity');
-                return;
-            }
-
-            if (currentScroll > lastScroll) {
-                // Rolando para baixo
-                header.classList.add('header-hide');
-                header.classList.remove('header-opacity');
-            } else {
-                // Rolando para cima
-                header.classList.remove('header-hide');
-                header.classList.add('header-opacity');
-            }
-            lastScroll = currentScroll;
-        });
-    </script>
-
 </body>
 
 </html>

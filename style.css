@@ -30,13 +30,14 @@ header {
     border-bottom: 1px solid #808080;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s, opacity 0.3s;
+    transition: top 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-hide {
     top: -100px;
     opacity: 0;
     pointer-events: none;
+    transition: top 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-opacity {
@@ -211,6 +212,12 @@ main img {
     box-shadow: 5px 5px 5px #00000036;
 }
 
+main img,
+.img-produto {
+    max-width: 100%;
+    height: auto;
+}
+
 main .div-sobre-nos {
     font-size: 25px;
     line-height: 1.5;
@@ -257,8 +264,6 @@ main .div-sobre-nos {
     box-shadow: 0px 2px 5px 3px rgba(102, 102, 102, 0.2);
     margin-top: 15px;
     background-color: white;
-    margin: 0 auto;
-    margin-top: 15px;
     margin-bottom: 10px;
 
 }
@@ -306,7 +311,7 @@ main .div-sobre-nos {
     max-width: 500px;
 }
 
-.conteudo-produto h2 {
+.conteudo-produto h3 {
     font-size: 45px;
     margin-bottom: 60px;
 }
