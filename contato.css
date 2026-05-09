@@ -76,6 +76,13 @@ textarea{
     margin-top: 10px;
 }
 
+input:focus,
+textarea:focus{
+    border: 1px solid greenyellow;
+    transition: all 0.3s;
+    outline: none;
+}
+
 .b-enviar {
     width: 100%;
     padding: 14px;
