@@ -1,5 +1,25 @@
+
+let count = 1;
+document.getElementById("radio1").checked = true
+
+setInterval(function () {
+    NextImg();
+}, 5000)
+
+function NextImg() {
+    count++;
+    if (count > 3) {
+        count = 1;
+    }
+
+    document.getElementById("radio" + count).checked = true
+
+}
+
+
 let lastScroll = 0;
 const header = document.querySelector('header');
+
 
 window.addEventListener('scroll', function () {
     const currentScroll = window.pageYOffset;

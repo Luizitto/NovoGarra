@@ -52,7 +52,7 @@ setInterval(() => {
             behavior: "smooth"
         });
     }
-}, 3000);
+}, 5000);
 
 
 carousel.addEventListener("mousedown", dragStart);
