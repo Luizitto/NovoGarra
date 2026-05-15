@@ -2,9 +2,14 @@
 let count = 1;
 document.getElementById("radio1").checked = true
 
-let carouselInterval = setInterval(function () {
-    NextImg();
-}, 10000)
+const carouselDelay = 10000;
+let carouselInterval = null;
+let carouselResumeTimeout = null;
+
+function startCarousel() {
+    stopCarousel();
+    carouselInterval = setInterval(NextImg, carouselDelay);
+}
 
 function stopCarousel() {
     if (carouselInterval !== null) {
@@ -12,6 +17,16 @@ function stopCarousel() {
         carouselInterval = null;
     }
 }
+
+function resetCarouselAfterInteraction() {
+    stopCarousel();
+    if (carouselResumeTimeout !== null) {
+        clearTimeout(carouselResumeTimeout);
+    }
+    carouselResumeTimeout = setTimeout(startCarousel, carouselDelay);
+}
+
+startCarousel();
 
 function NextImg() {
     count++;
@@ -69,13 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.slider');
     const radioButtons = document.querySelectorAll('input[name="radio-btn"]');
 
-    const stopCarouselOnClick = () => stopCarousel();
+    const resetCarouselOnInteraction = () => resetCarouselAfterInteraction();
 
     if (carousel) {
-        carousel.addEventListener('click', stopCarouselOnClick);
+        carousel.addEventListener('click', resetCarouselOnInteraction);
     }
 
     radioButtons.forEach(radio => {
-        radio.addEventListener('click', stopCarouselOnClick);
+        radio.addEventListener('click', resetCarouselOnInteraction);
     });
 });
