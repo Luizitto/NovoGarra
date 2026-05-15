@@ -152,6 +152,7 @@ h2.txt-main span,
 }
 
 .slider {
+    position: relative;
     margin: 0 auto;
     width: 100%;
     height: 100vh;
@@ -162,6 +163,7 @@ h2.txt-main span,
     width: 400%;
     height: 100%;
     display: flex;
+    position: relative;
 }
 
 .slides input {
@@ -183,12 +185,13 @@ h2.txt-main span,
 .manual-navigation {
     position: absolute;
     width: 100%;
-    margin-top: -40px;
+    bottom: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
 }
 
 .manual-btn {
@@ -228,7 +231,7 @@ h2.txt-main span,
 .navigation-auto {
     position: absolute;
     width: 100%;
-    margin-top: 755px;
+    bottom: 70px;
     display: flex;
     justify-content: center;
     gap: 20px;
