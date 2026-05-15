@@ -2,9 +2,16 @@
 let count = 1;
 document.getElementById("radio1").checked = true
 
-setInterval(function () {
+let carouselInterval = setInterval(function () {
     NextImg();
-}, 5000)
+}, 10000)
+
+function stopCarousel() {
+    if (carouselInterval !== null) {
+        clearInterval(carouselInterval);
+        carouselInterval = null;
+    }
+}
 
 function NextImg() {
     count++;
@@ -58,4 +65,17 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    const carousel = document.querySelector('.slider');
+    const radioButtons = document.querySelectorAll('input[name="radio-btn"]');
+
+    const stopCarouselOnClick = () => stopCarousel();
+
+    if (carousel) {
+        carousel.addEventListener('click', stopCarouselOnClick);
+    }
+
+    radioButtons.forEach(radio => {
+        radio.addEventListener('click', stopCarouselOnClick);
+    });
 });
