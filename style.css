@@ -35,7 +35,7 @@ header {
 }
 
 :root {
-    --main-overlap: clamp(35px, 4vh, 70px);
+    --main-overlap: clamp(35px, 1vh, 30px);
 }
 
 .header-hide {
