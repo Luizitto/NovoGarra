@@ -35,7 +35,7 @@ header {
 }
 
 :root {
-    --main-overlap: clamp(35px, 6vh, 70px);
+    --main-overlap: clamp(35px, 4vh, 70px);
 }
 
 .header-hide {
@@ -149,17 +149,9 @@ h2.txt-main span,
     overflow: hidden;
 }
 
-.c-banner img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
 .container {
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,6 +185,8 @@ h2.txt-main span,
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 #radio1:checked~.slides .first,
