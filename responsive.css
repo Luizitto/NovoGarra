@@ -125,7 +125,7 @@
     }
 
     main {
-        margin-top: -30px;
+        margin-top: -35px;
         padding: 24px 16px 18px;
         border-radius: 20px;
         width: 100vw
@@ -156,6 +156,12 @@
     .nossa-equipe {
         padding: 20px 35px;
     }
+
+    .link-zap img {
+        z-index: 10;
+        animation: bounce-whatsapp 2s infinite;
+    }
+
 
 
 }

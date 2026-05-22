@@ -169,7 +169,7 @@ h2.txt-main span,
 .slider {
     position: relative;
     width: 100%;
-    height: 100svh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -272,21 +272,19 @@ main {
     display: flex;
     position: relative;
     z-index: 2;
-    margin-top: calc(var(--main-overlap) * -1);
+    margin-top: -30px;
     justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
     padding: 20px;
-    min-height: 100vh;
-    min-width: 300px;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    min-height: 130vh;
     background: rgba(255, 255, 255, 1)
 }
 
-main video {
-    width: 60vw;
+video { 
     position: relative;
+    width: 75vw;
     margin-top: 20px;
     height: auto;
     border-radius: 35px;
@@ -302,7 +300,6 @@ main img,
 main .div-sobre-nos {
     font-size: 25px;
     line-height: 1.5;
-    max-width: 440px;
 }
 
 .div-sobre-nos p,
@@ -331,8 +328,18 @@ main .div-sobre-nos {
     cursor: pointer;
 }
 
+.txt-main{
+    position: relative;
+    margin-top: 20px;
+}
+
 .prf-main-container {
-    width: 100%;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
 }
 
 .prf-expandivel {
