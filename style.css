@@ -274,7 +274,7 @@ main {
     z-index: 2;
     margin-top: calc(var(--main-overlap) * -1);
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     padding: 20px;
     min-height: 100vh;
@@ -286,6 +286,8 @@ main {
 
 main video {
     width: 60vw;
+    position: relative;
+    margin-top: 20px;
     height: auto;
     border-radius: 35px;
     box-shadow: 5px 5px 5px #00000036;
@@ -300,12 +302,49 @@ main img,
 main .div-sobre-nos {
     font-size: 25px;
     line-height: 1.5;
-    max-width: 400px;
+    max-width: 440px;
 }
 
-.div-sobre-nos p {
+.div-sobre-nos p,
+.prf-expandivel {
     font-size: 18px;
-    padding-top: 25px;
+}
+
+.botao-saiba-mais {
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-ler-mais {
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    width: 130px;
+    background-color: #8ebe1e;
+    color: white;
+}
+
+.btn-ler-mais:hover {
+    opacity: 80%;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.prf-main-container {
+    width: 100%;
+}
+
+.prf-expandivel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    opacity: 0;
+}
+
+.prf-expandivel.expandido {
+    max-height: 550px;
+    opacity: 1;
 }
 
 .nossos-serviços {

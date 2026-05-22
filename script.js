@@ -93,4 +93,21 @@ document.addEventListener('DOMContentLoaded', function () {
     radioButtons.forEach(radio => {
         radio.addEventListener('click', resetCarouselOnInteraction);
     });
+
+    // Funcionalidade do botão "Ler Mais"
+    const btnLerMais = document.getElementById('btnLerMais');
+    const prfExpandivel = document.querySelector('.prf-expandivel');
+
+    if (btnLerMais && prfExpandivel) {
+        btnLerMais.addEventListener('click', function () {
+            prfExpandivel.classList.toggle('expandido');
+            
+            // Alterar o texto do botão
+            if (prfExpandivel.classList.contains('expandido')) {
+                btnLerMais.textContent = 'Ler menos';
+            } else {
+                btnLerMais.textContent = 'Ler mais';
+            }
+        });
+    }
 });
