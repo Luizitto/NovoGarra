@@ -59,11 +59,38 @@
     margin-bottom: 20px;
 }
 
-.carousel :where(.card, .img) {
+.carousel :where(.img) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.carousel .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 342px;
+    list-style: none;
+    background-color: rgb(244, 244, 244);
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px 0 15px;
+    cursor: pointer;
+    scroll-snap-align: start;
+}
+
+.carousel .card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .card .img img {
@@ -113,6 +140,7 @@
     object-fit: cover;
     border-radius: 50%;
     background-color: #8ebe1e;
+    overflow: hidden;
 }
 
 .card p {
