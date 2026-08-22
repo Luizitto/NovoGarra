@@ -96,9 +96,10 @@
 
 
     <main id="sobre-nos">
+        <h2 class="txt-main">Sobre <span>Nós</span></h2>
+        <video src="./src/video/video.mp4" controls loop></video>
         <div class="div-sobre-nos">
-            <video src="./src/video/video.mp4" controls loop></video>
-            <h2 class="txt-main">Sobre <span>Nós</span></h2>
+
             <div class="prf-main-container">
                 <p class="prf-main">A Garra nasceu há 4 anos com um propósito claro: estar perto do produtor e oferecer
                     uma
@@ -202,8 +203,40 @@
     <section class="nossos-produtos" id="produtos">
         <h2>Nossos <span>Produtos</span> </h2>
         <div class="linha-de-produtos">
-            <img src="./src/img/produtogarra.JPG" class="img-do-produto-garra" data-aos="fade-right"
-                alt="imagem-do-produto">
+            <div class="accordion-gallery" aria-label="Galeria-do-produto-Garra">
+                <a class="ag-panel is-active" href="./produtos.html" aria-label="Ver produtos Garra">
+                    <span class="ag-panel__frame">
+                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Produto Garra"></span>
+                        <span class="ag-panel__overlay"></span>
+                        <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
+                                class="ag-panel__text">Linha Garra</span></span>
+                    </span>
+                </a>
+                <a class="ag-panel" href="./produtos.html" aria-label="Conhecer suplementos Garra">
+                    <span class="ag-panel__frame">
+                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Suplemento Garra"></span>
+                        <span class="ag-panel__overlay"></span>
+                        <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
+                                class="ag-panel__text">Suplementos</span></span>
+                    </span>
+                </a>
+                <a class="ag-panel" href="./produtos.html" aria-label="Conhecer produtos para lactação">
+                    <span class="ag-panel__frame">
+                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Produtos para lactação"></span>
+                        <span class="ag-panel__overlay"></span>
+                        <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
+                                class="ag-panel__text">Lactação</span></span>
+                    </span>
+                </a>
+                <a class="ag-panel" href="./produtos.html" aria-label="Ver linha completa de produtos">
+                    <span class="ag-panel__frame">
+                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Linha completa Garra"></span>
+                        <span class="ag-panel__overlay"></span>
+                        <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
+                                class="ag-panel__text">Alta performance</span></span>
+                    </span>
+                </a>
+            </div>
 
             <div class="conteudo-produto" data-aos="fade-right">
                 <h3>Conheça nossa linha completa</h3>
@@ -214,6 +247,30 @@
                     cum.
                 </p>
                 <a class="botao-produto" href="./produtos.html"><span>Ver nossos produtos</span></a>
+            </div>
+        </div>
+    </section>
+    <section class="marcas-parceiras" aria-labelledby="titulo-marcas">
+        <div class="marcas-parceiras__cabecalho">
+            <p class="marcas-parceiras__eyebrow">Marcas que caminham com a Garra</p>
+            <h2 id="titulo-marcas">Nossos <span>Parceiros</span></h2>
+        </div>
+        <div class="logoloop logoloop--fade" aria-label="Marcas parceiras">
+            <div class="logoloop__track">
+                <ul class="logoloop__list">
+                    <li class="logoloop__item"> <a><span class="logoloop__node"><img src="./src/img/logos/logonovohorizonte.png" alt="NovoHorizonte"></span> </a></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png" alt="Pecus"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg" alt="Safeeds"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp" alt="Xando"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/racoesprodutorlogo.png" alt="Rações Produtor"></span></li>
+                </ul>
+                <ul class="logoloop__list" aria-hidden="true">
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logonovohorizonte.png" alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png" alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg" alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp" alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/racoesprodutorlogo.png" alt=""></span></li>
+                </ul>
             </div>
         </div>
     </section>

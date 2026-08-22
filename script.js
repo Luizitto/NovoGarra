@@ -93,6 +93,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    const productPanels = document.querySelectorAll('.accordion-gallery .ag-panel');
+
+    productPanels.forEach(panel => {
+        panel.addEventListener('focus', () => {
+            productPanels.forEach(item => item.classList.remove('is-active'));
+            panel.classList.add('is-active');
+        });
+
+        panel.addEventListener('click', () => {
+            productPanels.forEach(item => item.classList.remove('is-active'));
+            panel.classList.add('is-active');
+        });
+    });
+
 });
 
 

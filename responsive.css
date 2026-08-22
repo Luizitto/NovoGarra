@@ -45,7 +45,12 @@
         min-height: auto;
     }
 
-    .img-do-produto-garra {
+    .accordion-gallery {
+        flex-basis: 100%;
+        height: 360px;
+    }
+
+    .ag-panel__media {
         width: 100%;
     }
 
@@ -67,6 +72,30 @@
 
     #footer_copyright {
         text-align: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .nossos-produtos {
+        padding: 30px 20px;
+    }
+
+    .accordion-gallery {
+        flex-direction: column;
+        height: 420px;
+        perspective: none;
+    }
+
+    .ag-panel {
+        min-height: 84px;
+        transform: none;
+    }
+
+    .ag-panel:hover,
+    .ag-panel.is-active,
+    .ag-panel:focus-visible {
+        flex-grow: 3;
+        transform: none;
     }
 }
 
@@ -129,6 +158,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        align-self: auto;
+        margin-right: 0;
+        padding: 0;
     }
 
 
