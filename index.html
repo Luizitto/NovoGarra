@@ -23,18 +23,15 @@
 <body>
 
     <header>
-
-        <img src="./src/img/logo.PNG" class="img-logo" alt="logo-da-empresa">
-
         <div class="card-nav">
             <div class="loader">
-                <p>Garra</p>
+                <p>GARRA</p>
                 <div class="words">
-                    <span class="word">Nutrição</span>
-                    <span class="word">Conforto</span>
-                    <span class="word">Qualidade</span>
-                    <span class="word">Resultado</span>
-                    <span class="word">Nutrição</span>
+                    <span class="word">NUTRIÇÃO</span>
+                    <span class="word">CONFORTO</span>
+                    <span class="word">QUALIDADE</span>
+                    <span class="word">RESULTADO</span>
+                    <span class="word">NUTRIÇÃO</span>
                 </div>
             </div>
         </div>
@@ -52,36 +49,24 @@
 
     <section class="c-banner" id="home">
         <div class="container">
-
-            <div class="slider">
-
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-
-                <div class="slides">
-                    <div class="slide first">
-                        <img src="./src/img/banner1.png" alt="imagem1">
-                    </div>
-                    <div class="slide">
-                        <img src="./src/img/banner2.png" alt="imagem2">
-                    </div>
-                    <div class="slide">
-                        <img src="./src/img/banner3.png" alt="imagem3">
-                    </div>
-
-                    <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-
-                    </div>
+            <div class="morph-slider" data-autoplay="10000" aria-label="Banners da Garra">
+                <div class="morph-slider-stage" tabindex="0" role="region" aria-live="polite" aria-label="Banner atual">
+                    <canvas class="morph-slider-canvas"></canvas>
                 </div>
 
-                <div class="manual-navigation">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
+                <div class="morph-slider-caption" aria-hidden="true">
+                    <span class="morph-slider-caption-text is-active"></span>
+                </div>
+
+                <div class="morph-slider-controls" aria-label="Controles do banner">
+                    <button class="morph-slider-btn morph-slider-btn-prev" type="button" aria-label="Banner anterior">&#10094;</button>
+                    <button class="morph-slider-btn morph-slider-btn-next" type="button" aria-label="Próximo banner">&#10095;</button>
+                </div>
+
+                <div class="morph-slider-indicators" aria-label="Selecionar banner">
+                    <button class="morph-slider-dot is-active" type="button" aria-label="Mostrar banner 1" aria-current="true"></button>
+                    <button class="morph-slider-dot" type="button" aria-label="Mostrar banner 2"></button>
+                    <button class="morph-slider-dot" type="button" aria-label="Mostrar banner 3"></button>
                 </div>
             </div>
         </div>
@@ -91,16 +76,15 @@
 
     <a class="link-zap"
         href="https://api.whatsapp.com/send?phone=5531995981646&text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Garra%21%20">
-        <img src="./src/img/iwhatsapp.png" alt="icone-whatsapp" />
+        <img src="./src/img/Icones/iwhatsapp.png" alt="icone-whatsapp" />
     </a>
 
 
     <main id="sobre-nos">
-        <h2 class="txt-main">Sobre <span>Nós</span></h2>
-        <video src="./src/video/video.mp4" controls loop></video>
         <div class="div-sobre-nos">
-
             <div class="prf-main-container">
+                <p class="sobre-eyebrow">Nossa história, nosso propósito</p>
+                <h2 class="txt-main">Sobre <span>Nós</span></h2>
                 <p class="prf-main">A Garra nasceu há 4 anos com um propósito claro: estar perto do produtor e oferecer
                     uma
                     atuação técnica direcionada, presente e conectada com a realidade de cada fazenda.
@@ -139,63 +123,50 @@
         </div>
 
     </main>
+    <section class="sobre-video-section" aria-label="Vídeo da Garra Nutrição Animal">
+        <video class="sobre-video" src="./src/video/video.mp4" loop muted playsinline preload="metadata" tabindex="0"
+            aria-label="Prévia em vídeo da Garra Nutrição Animal"></video>
+    </section>
     <section class="nossos-serviços" id="serviços">
         <div class="txt-serviços">
             <h2 class="span-serviços"><span>Nossos</span> Serviços</h2>
 
-            <h3 class="text-garra">Porque trabalhar com a <span>GARRA?</span></h3>
+            <h3 class="text-garra">Muito além da nutrição animal!</h3>
         </div>
         <section class="tipos-serviços">
             <div class="chek-box1">
-                <div class="title-chek" data-aos="fade-right">
-                    <img width="90" height="90" src="./src/img/ic.nutricaoanimal.png" class="icone-serviços"
+                <div class="title-chek">
+                    <img width="90" height="90" src="./src/img/Icones/ic.nutricaoanimal.png" class="icone-serviços"
                         alt="icone-tipo-de-serviço">
-                    <h3 class="titulos-serviços">Nutrição Animal</h3>
-                    <p>Oferecemos soluções nutricionais completas para vacas, bezerras e todo o rebanho. Com foco em
-                        saúde, produtividade e bem-estar animal, nossa equipe formula dietas ajustadas à realidade da
-                        sua fazenda, promovendo melhor aproveitamento dos nutrientes e alto desempenho zootécnico.</p>
+                    <h3 class="titulos-serviços">Nutrição Estrategica</h3>
+                    <p>Diagnóstico da propriedade e planejamento nutricional personalizado, considerando a realidade de
+                        cada negócio, os objetivos do produtor e as oportunidades de evolução do negócio.</p>
                 </div>
-                <div class="title-chek" data-aos="fade-right">
-                    <img width="90" height="90" src="./src/img/ic.produtosqualidade.png" class="icone-serviços"
+                <div class="title-chek-principal">
+                    <img width="90" height="90" src="./src/img/Icones/ic.desempenho.png" class="icone-serviços"
                         alt="icone-tipo-de-serviço">
-                    <h3 class="titulos-serviços">Produtos de Alta Qualidade</h3>
-                    <p>Trabalhamos com matérias-primas selecionadas e insumos de alta pureza. Nossos suplementos e
-                        rações são desenvolvidos sob rigoroso controle técnico, garantindo confiabilidade, estabilidade
-                        e os melhores resultados no campo. Qualidade é o que move cada etapa do nosso trabalho.</p>
+                    <h3 class="titulos-serviços">Acompanhamento Proximo</h3>
+                    <p>Presença técnica constante na fazenda para acompanhar a rotina, orientar a equipe e construir
+                        decisões lado a lado com o produtor.</p>
                 </div>
-                <div class="title-chek" data-aos="fade-right">
-                    <img width="90" height="90" src="./src/img/ic.gestao.png" class="icone-serviços"
+                <div class="title-chek">
+                    <img width="90" height="90" src="./src/img/Icones/ic.gestao.png" class="icone-serviços"
                         alt="icone-tipo-de-serviço">
-                    <h3 class="titulos-serviços">Gestão de Negocios</h3>
-                    <p>Muito além da nutrição, auxiliamos na gestão estratégica da sua fazenda. Acompanhamos
-                        indicadores, analisamos desempenho produtivo e ajudamos na tomada de decisões que impactam
-                        diretamente na rentabilidade. Transformamos dados em ações práticas e lucrativas.</p>
-                </div>
-                <div class="title-chek" data-aos="fade-right">
-                    <img width="90" height="90" src="./src/img/ic.dietaperformece.png" class="icone-serviços"
-                        alt="icone-tipo-de-serviço">
-                    <h3 class="titulos-serviços">Dietas de Alta Performance</h3>
-                    <p>Desenvolvemos dietas balanceadas para maximizar o ganho de peso, melhorar a conversão alimentar e
-                        reduzir custos. Indicadas para sistemas intensivos ou semi-intensivos, essas formulações são
-                        baseadas em análises técnicas e adaptadas ao seu objetivo de produtividade máxima.</p>
-                </div>
-                <div class="title-chek" data-aos="fade-right">
-                    <img width="90" height="90" src="./src/img/ic.qualidade.png" class="icone-serviços"
-                        alt="icone-tipo-de-serviço">
-                    <h3 class="titulos-serviços">Qualidade</h3>
-                    <p>Desde a seleção dos ingredientes até a entrega no campo, buscamos excelência em cada detalhe. A
-                        Garra Nutrição é comprometida com a qualidade do que oferece, prezando pela segurança alimentar
-                        dos animais e pelos resultados consistentes na produção leiteira ou de corte.</p>
-                </div>
-                <div class="title-chek" data-aos="fade-right">
-                    <img width="90" height="90" src="./src/img/ic.desempenho.png" class="icone-serviços"
-                        alt="icone-tipo-de-serviço">
-                    <h3 class="titulos-serviços">Acompanhamento de Todos os Processos da Fazenda</h3>
-                    <p>Estar presente é o que faz a diferença. Nossa equipe realiza visitas técnicas, acompanha cada
-                        fase do processo produtivo, ajusta rotinas de manejo e monitora os efeitos das dietas. Atuamos
-                        lado a lado com você, do cocho ao resultado final, com presença, apoio e dedicação.</p>
+                    <h3 class="titulos-serviços">Gestão de resultados</h3>
+                    <p>Monitoramento dos indicadores produtivos e financeiros para realizar ajustes estratégicos e
+                        promover mais eficiência, rentabilidade e crescimento sustentável.</p>
                 </div>
             </div>
+            <div class="content-Nosso-Serviços-Texto">
+                <p>Expertise técnica que percorre distâncias, acompanhamento próximo, lado a lado e ciência nutricional
+                    aplicada à realidade de cada fazenda</p>
+
+                <div class="button-Nossos-Serviços">
+                    <button class="button-talk-specialist">Fale com um Especilista</button>
+                </div>
+
+            </div>
+
 
         </section>
     </section>
@@ -206,7 +177,7 @@
             <div class="accordion-gallery" aria-label="Galeria-do-produto-Garra">
                 <a class="ag-panel is-active" href="./produtos.html" aria-label="Ver produtos Garra">
                     <span class="ag-panel__frame">
-                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Produto Garra"></span>
+                        <span class="ag-panel__media"><img src="./src/img/Produtos/produtogarra.JPG" alt="Produto Garra"></span>
                         <span class="ag-panel__overlay"></span>
                         <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
                                 class="ag-panel__text">Linha Garra</span></span>
@@ -214,7 +185,8 @@
                 </a>
                 <a class="ag-panel" href="./produtos.html" aria-label="Conhecer suplementos Garra">
                     <span class="ag-panel__frame">
-                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Suplemento Garra"></span>
+                        <span class="ag-panel__media"><img src="./src/img/Produtos/produtogarra.JPG"
+                                alt="Suplemento Garra"></span>
                         <span class="ag-panel__overlay"></span>
                         <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
                                 class="ag-panel__text">Suplementos</span></span>
@@ -222,7 +194,8 @@
                 </a>
                 <a class="ag-panel" href="./produtos.html" aria-label="Conhecer produtos para lactação">
                     <span class="ag-panel__frame">
-                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Produtos para lactação"></span>
+                        <span class="ag-panel__media"><img src="./src/img/Produtos/produtogarra.JPG"
+                                alt="Produtos para lactação"></span>
                         <span class="ag-panel__overlay"></span>
                         <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
                                 class="ag-panel__text">Lactação</span></span>
@@ -230,7 +203,8 @@
                 </a>
                 <a class="ag-panel" href="./produtos.html" aria-label="Ver linha completa de produtos">
                     <span class="ag-panel__frame">
-                        <span class="ag-panel__media"><img src="./src/img/produtogarra.JPG" alt="Linha completa Garra"></span>
+                        <span class="ag-panel__media"><img src="./src/img/Produtos/produtogarra.JPG"
+                                alt="Linha completa Garra"></span>
                         <span class="ag-panel__overlay"></span>
                         <span class="ag-panel__label"><span class="ag-panel__bar"></span><span
                                 class="ag-panel__text">Alta performance</span></span>
@@ -258,18 +232,28 @@
         <div class="logoloop logoloop--fade" aria-label="Marcas parceiras">
             <div class="logoloop__track">
                 <ul class="logoloop__list">
-                    <li class="logoloop__item"> <a><span class="logoloop__node"><img src="./src/img/logos/logonovohorizonte.png" alt="NovoHorizonte"></span> </a></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png" alt="Pecus"></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg" alt="Safeeds"></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp" alt="Xando"></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/racoesprodutorlogo.png" alt="Rações Produtor"></span></li>
+                    <li class="logoloop__item"> <a><span class="logoloop__node"><img
+                                    src="./src/img/logos/logonovohorizonte.png" alt="NovoHorizonte"></span> </a></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png"
+                                alt="Pecus"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg"
+                                alt="Safeeds"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp"
+                                alt="Xando"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img
+                                src="./src/img/logos/racoesprodutorlogo.png" alt="Rações Produtor"></span></li>
                 </ul>
                 <ul class="logoloop__list" aria-hidden="true">
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logonovohorizonte.png" alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png" alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg" alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp" alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/racoesprodutorlogo.png" alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img
+                                src="./src/img/logos/logonovohorizonte.png" alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png"
+                                alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg"
+                                alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp"
+                                alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img
+                                src="./src/img/logos/racoesprodutorlogo.png" alt=""></span></li>
                 </ul>
             </div>
         </div>
@@ -284,7 +268,7 @@
                         <li class="card">
                             <a href="https://www.instagram.com/danielescarce?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                 target="_blank">
-                                <div class="img"><img src="./src/img/equipeDaniel.jpg"
+                                <div class="img"><img src="./src/img/Equipe/Daniel.jpg"
                                         alt="img-funcionario-profissional" draggable="false">
                                 </div>
                                 <p>Daniel Escarce</p>
@@ -294,7 +278,7 @@
                         <li class="card">
                             <a href="https://www.instagram.com/thiagoescarce?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                 target="_blank">
-                                <div class="img"><img src="./src/img/equipeTiago.jpg" alt=img-funcionario-profissional
+                                <div class="img"><img src="./src/img/Equipe/Tiago.jpg" alt="img-funcionario-profissional"
                                         draggable="false">
                                 </div>
                                 <p>Thiago Escarce</p>
@@ -304,7 +288,7 @@
                         <li class="card">
                             <a href="https://www.instagram.com/lucarnavalli?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                 target="_blank">
-                                <div class="img"><img src="./src/img/equipeLuanda.jpg"
+                                <div class="img"><img src="./src/img/Equipe/Luanda.jpg"
                                         alt="img-funcionario-profissional" draggable="false">
                                 </div>
                                 <p>Luanda Escarce</p>
@@ -314,7 +298,7 @@
                         <li class="card">
                             <a href="https://www.instagram.com/fernandac_martins?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                 target="_blank">
-                                <div class="img"><img src="./src/img/equipeFernanda.jpg"
+                                <div class="img"><img src="./src/img/Equipe/Fernanda.jpg"
                                         alt="img-funcionario-profissional" draggable="false">
                                 </div>
                                 <p>Fernanda Silva</p>
@@ -324,7 +308,7 @@
                         <li class="card">
                             <a href="https://www.instagram.com/anafpaiva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                 target="_blank">
-                                <div class="img"><img src="./src/img/equipeAna.jpg" alt="img-funcionario-profissional"
+                                <div class="img"><img src="./src/img/Equipe/Ana.jpg" alt="img-funcionario-profissional"
                                         draggable="false">
                                 </div>
                                 <p>Ana Flavia</p>
@@ -406,13 +390,25 @@
                 </li>
             </ul>
 
-            <div id="footer_subscribe" class="footer-list">
-                <h3>Horario de funcionamento</h3>
-                <p>
-                    08:00 às 18:00 - Segunda á Sexta, horário de Brasília
-                </p>
-                <a href="https://maps.app.goo.gl/NPJHrxS9PsfUNRsy6">R. dos Bariris, 662 - Jardim Italia, Passos - MG,
-                    37901-515</a>
+            <div id="contate-nos" class="footer-list footer_subscribe">
+                <h3>Contato</h3>
+                <a class="footer-contact-link" href="tel:+5531995981646">
+                    <img src="./src/img/Icones/icontelefone.png" alt="" />
+                    <span><strong>Telefone</strong><br>(31) 9 9598-1646</span>
+                </a>
+                <a class="footer-contact-link" href="https://maps.app.goo.gl/NPJHrxS9PsfUNRsy6">
+                    <img src="./src/img/Icones/iconlocalizacao.png" alt="" />
+                    <span><strong>Localização</strong><br>R. dos Bariris, 662 - Jardim Italia, Passos - MG, 37901-515</span>
+                </a>
+                <a class="footer-contact-link" href="mailto:luizvilela456@gmail.com">
+                    <img src="./src/img/Icones/iconemail.png" alt="" />
+                    <span><strong>E-mail</strong><br>luizvilela456@gmail.com</span>
+                </a>
+                <a class="footer-contact-link"
+                    href="https://api.whatsapp.com/send?phone=5531995981646&text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Garra%21%20">
+                    <img src="./src/img/Icones/iconwths.png" alt="" />
+                    <span><strong>WhatsApp</strong><br>(31) 9 9598-1646</span>
+                </a>
             </div>
         </div>
 
@@ -421,57 +417,11 @@
             <a href="https://www.instagram.com/dev_luizvilela/">Developer Luiz Vilela</a>
         </div>-->
 
-        <section class="contato-container" id="contate-nos">
-            <div class="info-contato" id="contato">
-                <!-- <h2>Entre em contato</h2> -->
-                <!-- <p>Preencha o formulário ao lado e entraremos em contato com você o mais rápido possível.</p>-->
-
-                <a href="tel:+5531995981646">
-                    <div class="item-contato">
-                        <img src="./src/img/icontelefone.png" alt="Telefone" />
-                        <div>
-                            <strong>Telefone</strong>
-                            <p>(31) 9 9598-1646</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://maps.app.goo.gl/NPJHrxS9PsfUNRsy6">
-                    <div class="item-contato">
-                        <img src="./src/img/iconlocalizacao.png" alt="Localização" />
-                        <div>
-                            <strong>Localização</strong>
-                            <p>R. dos Bariris, 662 - Jardim Italia, Passos - MG, 37901-515</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="mailto:luizvilela456@gmail.com">
-                    <div class="item-contato">
-                        <img src="./src/img/iconemail.png" alt="E-mail" />
-                        <div>
-                            <strong>E-mail</strong>
-                            <p>email@gmail.com</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a
-                    href="https://api.whatsapp.com/send?phone=5531995981646&text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Garra%21%20">
-                    <div class="item-contato">
-                        <img src="./src/img/iconwths.png" alt="WhatsApp" />
-                        <div>
-                            <strong>Whatsapp</strong>
-                            <p>(31) 9 9598-1646</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-
-            <div id="footer_copyright">
-                &#169;
-                2026 Garra Nutrição Animal
-                Todos os Direitos Reservados
-            </div>
+        <div id="footer_copyright">
+            &#169;
+            2026 Garra Nutrição Animal
+            Todos os Direitos Reservados
+        </div>
     </footer>
 
 

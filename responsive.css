@@ -23,26 +23,23 @@
         right: 1rem;
     }
 
-    video {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    main {
-        position: relative;
-        z-index: 2;
+    #sobre-nos {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 30px 20px 20px;
-        margin-top: -40px;
-        background: rgba(255, 255, 255, 0.96);
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-        width: 100vw;
-        min-height: auto;
+        align-items: stretch;
+        gap: 0;
+        padding: 48px 24px 36px;
+        min-height: 0;
+    }
+
+    .sobre-video-section {
+        padding: 32px 24px;
+    }
+
+    #sobre-nos .div-sobre-nos {
+        width: 100%;
+        align-self: stretch;
+        padding: 28px;
     }
 
     .accordion-gallery {
@@ -117,32 +114,28 @@
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     }
 
-    main {
-        margin-top: -35px;
-        padding: 24px 16px 18px;
-        width: 100vw
+    #sobre-nos {
+        padding: 38px 16px 28px;
     }
 
-    main img,
+    #sobre-nos img,
     .img-produto {
         width: 100%;
         max-width: 100vw;
         height: auto;
     }
 
-
-    main video {
-        width: 90vw;
-        position: relative;
-        margin-top: 20px;
-        height: auto;
-        border-radius: 35px;
-        box-shadow: 5px 5px 5px #00000036;
+    .sobre-video-section {
+        padding: 24px 16px;
     }
 
-    .prf-expandivel.expandido {
-        max-height: 670px;
-        opacity: 1;
+    #sobre-nos .div-sobre-nos {
+        padding: 22px 18px;
+        border-radius: 22px;
+    }
+
+    #sobre-nos .prf-expandivel.expandido {
+        max-height: 900px;
     }
 
     .nossa-equipe {
@@ -153,17 +146,6 @@
         z-index: 10;
         animation: bounce-whatsapp 2s infinite;
     }
-
-    .div-sobre-nos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        align-self: auto;
-        margin-right: 0;
-        padding: 0;
-    }
-
 
 }
 
@@ -181,8 +163,8 @@
     }
 
 
-    .prf-main-container {
-        width: 95vw;
+    #sobre-nos .prf-main-container {
+        width: 100%;
     }
 
     .chek-box1 {
