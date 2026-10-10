@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" href="./src/img/logopagina.PNG" type="image/x-icon">
     <link rel="stylesheet" href="equipe.css">
-    <link rel="stylesheet" href="contato.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
@@ -35,13 +34,14 @@
                 </div>
             </div>
         </div>
-
-        <img src="./src/img/icon-menu.png" id="menu-hambuguer" alt="icone-menu">
+        <button type="button" id="menu-hambuguer" aria-label="Abrir menu" aria-expanded="false">
+            <img src="./src/img/Icones/icon-menu.png" alt="">
+        </button>
         <nav class="nav-bar">
             <a href="#home" data-aos="fade-down">Home</a>
-            <a href="#sobre-nos" data-aos="fade-down">Sobre Nós</a>
             <a href="#serviços" data-aos="fade-down">Nossos Serviços</a>
             <a href="#produtos" data-aos="fade-down">Nossos Produtos</a>
+            <a href="#sobre-nos" data-aos="fade-down">Sobre Nós</a>
             <a href="#contate-nos" data-aos="fade-down">Contate-nos</a>
         </nav>
     </header>
@@ -52,10 +52,6 @@
             <div class="morph-slider" data-autoplay="10000" aria-label="Banners da Garra">
                 <div class="morph-slider-stage" tabindex="0" role="region" aria-live="polite" aria-label="Banner atual">
                     <canvas class="morph-slider-canvas"></canvas>
-                </div>
-
-                <div class="morph-slider-caption" aria-hidden="true">
-                    <span class="morph-slider-caption-text is-active"></span>
                 </div>
 
                 <div class="morph-slider-controls" aria-label="Controles do banner">
@@ -80,76 +76,29 @@
     </a>
 
 
-    <main id="sobre-nos">
-        <div class="div-sobre-nos">
-            <div class="prf-main-container">
-                <p class="sobre-eyebrow">Nossa história, nosso propósito</p>
-                <h2 class="txt-main">Sobre <span>Nós</span></h2>
-                <p class="prf-main">A Garra nasceu há 4 anos com um propósito claro: estar perto do produtor e oferecer
-                    uma
-                    atuação técnica direcionada, presente e conectada com a realidade de cada fazenda.
-                    <br><br>
-                    Desde o início, nossa história foi construída com dedicação, confiança e compromisso com resultados
-                    reais no campo. Mais do que trabalhar com nutrição animal, caminhamos ao lado do produtor para
-                    entender
-                    seus desafios, identificar oportunidades e apoiar decisões que fazem a produção avançar.
-                    Nossa essência está em unir expertise técnica com proximidade.
-                </p>
-                <div class="prf-expandivel">
-                    <br><br>
-                    Garra: onde a expertise técnica entende o sotaque da sua fazenda.
-                    Cada propriedade tem seu jeito, seu ritmo, sua equipe, seus números e seus desafios. O nosso
-                    trabalho é
-                    respeitar essa realidade para construir soluções que façam sentido na prática.
-                    <br><br>
-                    A Garra também carrega uma parceria que vem de antes da empresa: a união entre irmãos. Daniel e
-                    Thiago
-                    compartilham uma história marcada por lealdade, cumplicidade e pelo mesmo propósito de gerar
-                    resultado
-                    no campo com seriedade, presença e responsabilidade.
-                    <br><br>
-                    Hoje, a Garra Nutrição Animal segue crescendo com a mesma essência que deu origem à sua história:
-                    confiança, proximidade e compromisso verdadeiro com quem vive o agro todos os dias.
-                </div>
-                <div class="botao-saiba-mais">
-                    <button class="btn-ler-mais" id="btnLerMais">
-                        <span class="circle">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Ler mais</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-    </main>
-    <section class="sobre-video-section" aria-label="Vídeo da Garra Nutrição Animal">
-        <video class="sobre-video" src="./src/video/video.mp4" loop muted playsinline preload="metadata" tabindex="0"
-            aria-label="Prévia em vídeo da Garra Nutrição Animal"></video>
-    </section>
     <section class="nossos-serviços" id="serviços">
-        <div class="txt-serviços">
+        <div class="txt-serviços" data-aos="fade-up">
             <h2 class="span-serviços"><span>Nossos</span> Serviços</h2>
 
             <h3 class="text-garra">Muito além da nutrição animal!</h3>
         </div>
         <section class="tipos-serviços">
             <div class="chek-box1">
-                <div class="title-chek">
+                <div class="title-chek" data-aos="fade-up">
                     <img width="90" height="90" src="./src/img/Icones/ic.nutricaoanimal.png" class="icone-serviços"
                         alt="icone-tipo-de-serviço">
                     <h3 class="titulos-serviços">Nutrição Estrategica</h3>
                     <p>Diagnóstico da propriedade e planejamento nutricional personalizado, considerando a realidade de
                         cada negócio, os objetivos do produtor e as oportunidades de evolução do negócio.</p>
                 </div>
-                <div class="title-chek-principal">
+                <div class="title-chek-principal" data-aos="fade-up" data-aos-delay="100">
                     <img width="90" height="90" src="./src/img/Icones/ic.desempenho.png" class="icone-serviços"
                         alt="icone-tipo-de-serviço">
                     <h3 class="titulos-serviços">Acompanhamento Proximo</h3>
                     <p>Presença técnica constante na fazenda para acompanhar a rotina, orientar a equipe e construir
                         decisões lado a lado com o produtor.</p>
                 </div>
-                <div class="title-chek">
+                <div class="title-chek" data-aos="fade-up" data-aos-delay="200">
                     <img width="90" height="90" src="./src/img/Icones/ic.gestao.png" class="icone-serviços"
                         alt="icone-tipo-de-serviço">
                     <h3 class="titulos-serviços">Gestão de resultados</h3>
@@ -157,25 +106,74 @@
                         promover mais eficiência, rentabilidade e crescimento sustentável.</p>
                 </div>
             </div>
-            <div class="content-Nosso-Serviços-Texto">
+            <div class="content-Nosso-Serviços-Texto" data-aos="fade-up">
                 <p>Expertise técnica que percorre distâncias, acompanhamento próximo, lado a lado e ciência nutricional
                     aplicada à realidade de cada fazenda</p>
 
-                <div class="button-Nossos-Serviços">
-                    <button class="button-talk-specialist">Fale com um Especilista</button>
+                <div class="button-Nossos-Serviços" data-aos="fade-up">
+                    <a class="button-talk-specialist"
+                        href="https://api.whatsapp.com/send?phone=5531995981646&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Garra.">Fale com um Especialista</a>
                 </div>
 
             </div>
 
-
         </section>
+        <div class="servicos-resultados" aria-label="Resultados da Garra">
+            <article class="servicos-resultado" data-aos="fade-up">
+                <strong data-count="100">+100</strong>
+                <h3>Clientes satisfeitos</h3>
+            </article>
+            <article class="servicos-resultado" data-aos="fade-up" data-aos-delay="100">
+                <strong data-count="500">+500</strong>
+                <h3>Fazendas atendidas</h3>
+            </article>
+            <article class="servicos-resultado" data-aos="fade-up" data-aos-delay="200">
+                <strong data-count="800000">+800.000</strong>
+                <h3>Aumento na produção</h3>
+            </article>
+        </div>
+    </section>
+
+    <section class="marcas-parceiras" aria-labelledby="titulo-marcas">
+        <div class="marcas-parceiras__cabecalho" data-aos="fade-up">
+            <p class="marcas-parceiras__eyebrow">Marcas que caminham com a Garra</p>
+            <h2 id="titulo-marcas">Nossos <span>Parceiros</span></h2>
+        </div>
+        <div class="logoloop logoloop--fade" aria-label="Marcas parceiras">
+            <div class="logoloop__track">
+                <ul class="logoloop__list">
+                    <li class="logoloop__item"> <a><span class="logoloop__node"><img
+                                    src="./src/img/logos/logonovohorizonte.png" alt="NovoHorizonte"></span> </a></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png"
+                                alt="Pecus"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg"
+                                alt="Safeeds"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp"
+                                alt="Xando"></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img
+                                src="./src/img/logos/racoesprodutorlogo.png" alt="Rações Produtor"></span></li>
+                </ul>
+                <ul class="logoloop__list" aria-hidden="true">
+                    <li class="logoloop__item"><span class="logoloop__node"><img
+                                src="./src/img/logos/logonovohorizonte.png" alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png"
+                                alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg"
+                                alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp"
+                                alt=""></span></li>
+                    <li class="logoloop__item"><span class="logoloop__node"><img
+                                src="./src/img/logos/racoesprodutorlogo.png" alt=""></span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="nossos-produtos" id="produtos">
-        <h2>Nossos <span>Produtos</span> </h2>
+        <h2 data-aos="fade-up">Nossos <span>Produtos</span> </h2>
         <div class="linha-de-produtos">
             <div class="accordion-gallery" aria-label="Galeria-do-produto-Garra">
-                <a class="ag-panel is-active" href="./produtos.html" aria-label="Ver produtos Garra">
+                <a class="ag-panel is-active" href="./produtos.html">
                     <span class="ag-panel__frame">
                         <span class="ag-panel__media"><img src="./src/img/Produtos/produtogarra.JPG" alt="Produto Garra"></span>
                         <span class="ag-panel__overlay"></span>
@@ -212,55 +210,58 @@
                 </a>
             </div>
 
-            <div class="conteudo-produto" data-aos="fade-right">
+            <div class="conteudo-produto" data-aos="fade-up">
                 <h3>Conheça nossa linha completa</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, distinctio obcaecati expedita
-                    tenetur
-                    magnam veniam aut libero ex dolores et, nam iure itaque iste laboriosam. Dolores minima ad
-                    consectetur
-                    cum.
-                </p>
-                <a class="botao-produto" href="./produtos.html"><span>Ver nossos produtos</span></a>
+                <p>Conheça os suplementos e núcleos da Garra, desenvolvidos para atender diferentes etapas e desafios
+                    da produção animal.</p>
+                <a class="botao-produto" href="./produtos.html" data-aos="fade-up"><span>Ver nossos produtos</span></a>
             </div>
         </div>
     </section>
-    <section class="marcas-parceiras" aria-labelledby="titulo-marcas">
-        <div class="marcas-parceiras__cabecalho">
-            <p class="marcas-parceiras__eyebrow">Marcas que caminham com a Garra</p>
-            <h2 id="titulo-marcas">Nossos <span>Parceiros</span></h2>
-        </div>
-        <div class="logoloop logoloop--fade" aria-label="Marcas parceiras">
-            <div class="logoloop__track">
-                <ul class="logoloop__list">
-                    <li class="logoloop__item"> <a><span class="logoloop__node"><img
-                                    src="./src/img/logos/logonovohorizonte.png" alt="NovoHorizonte"></span> </a></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png"
-                                alt="Pecus"></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg"
-                                alt="Safeeds"></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp"
-                                alt="Xando"></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img
-                                src="./src/img/logos/racoesprodutorlogo.png" alt="Rações Produtor"></span></li>
-                </ul>
-                <ul class="logoloop__list" aria-hidden="true">
-                    <li class="logoloop__item"><span class="logoloop__node"><img
-                                src="./src/img/logos/logonovohorizonte.png" alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logopecus.png"
-                                alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logosafeeds.svg"
-                                alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img src="./src/img/logos/logoxando.webp"
-                                alt=""></span></li>
-                    <li class="logoloop__item"><span class="logoloop__node"><img
-                                src="./src/img/logos/racoesprodutorlogo.png" alt=""></span></li>
-                </ul>
+    <main id="sobre-nos">
+        <div class="div-sobre-nos" data-aos="fade-up">
+            <div class="prf-main-container">
+                <p class="sobre-eyebrow">Nossa história, nosso propósito</p>
+                <h2 class="txt-main">Sobre <span>Nós</span></h2>
+                <p class="prf-main">A Garra nasceu há 4 anos com um propósito claro: estar perto do produtor e oferecer
+                    uma atuação técnica direcionada, presente e conectada com a realidade de cada fazenda.
+                    <br><br>
+                    Desde o início, nossa história foi construída com dedicação, confiança e compromisso com resultados
+                    reais no campo. Mais do que trabalhar com nutrição animal, caminhamos ao lado do produtor para
+                    entender seus desafios, identificar oportunidades e apoiar decisões que fazem a produção avançar.
+                    Nossa essência está em unir expertise técnica com proximidade.
+                </p>
+                <div class="prf-expandivel">
+                    <br><br>
+                    Garra: onde a expertise técnica entende o sotaque da sua fazenda.
+                    Cada propriedade tem seu jeito, seu ritmo, sua equipe, seus números e seus desafios. O nosso
+                    trabalho é respeitar essa realidade para construir soluções que façam sentido na prática.
+                    <br><br>
+                    A Garra também carrega uma parceria que vem de antes da empresa: a união entre irmãos. Daniel e
+                    Thiago compartilham uma história marcada por lealdade, cumplicidade e pelo mesmo propósito de gerar
+                    resultado no campo com seriedade, presença e responsabilidade.
+                    <br><br>
+                    Hoje, a Garra Nutrição Animal segue crescendo com a mesma essência que deu origem à sua história:
+                    confiança, proximidade e compromisso verdadeiro com quem vive o agro todos os dias.
+                </div>
+                <div class="botao-saiba-mais">
+                    <button class="btn-ler-mais" id="btnLerMais">
+                        <span class="circle">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Ler mais</span>
+                    </button>
+                </div>
             </div>
         </div>
+    </main>
+    <section class="sobre-video-section" aria-label="Vídeo da Garra Nutrição Animal">
+        <video class="sobre-video" data-aos="fade-up" src="./src/video/video.mp4" loop muted playsinline preload="metadata" tabindex="0"
+            aria-label="Prévia em vídeo da Garra Nutrição Animal"></video>
     </section>
     <section class="nossa-equipe" id="nossaequipe">
         <div class="conteudo-equipe">
-            <h2 class="titulo-secao">Conheça <span>Nossa Equipe</span></h2>
+            <h2 class="titulo-secao" data-aos="fade-up">Conheça <span>Nossa Equipe</span></h2>
             <div class="linha-equipe">
                 <div class="wrapper">
 
@@ -342,17 +343,6 @@
     </section> -->
 
 
-    <!--- 
-        <form class="form-contato" action="https://formspree.io/f/mdkdyawq" method="post">
-            <h3>Contatar</h3>
-            <input type="text" name="assunto" placeholder="Assunto" required />
-            <textarea name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
-            <button class="b-enviar" type="submit">Enviar mensagem</button>
-        </form> 
-        -->
-    </section>
-
-
     <footer>
         <div id="footer_content">
             <div class="f-texto">
@@ -413,10 +403,6 @@
         </div>
 
 
-        <!-- <div class="devcreat">
-            <a href="https://www.instagram.com/dev_luizvilela/">Developer Luiz Vilela</a>
-        </div>-->
-
         <div id="footer_copyright">
             &#169;
             2026 Garra Nutrição Animal
@@ -431,7 +417,12 @@
     <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 750,
+            easing: 'ease-out-cubic',
+            offset: 70,
+            once: true
+        });
     </script>
 </body>
 

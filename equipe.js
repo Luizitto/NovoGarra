@@ -1,15 +1,10 @@
 const carousel = document.querySelector(".carousel");
-const arrowBtns = document.querySelectorAll(".wrapper i");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 let isDragging = false, startX, startScrollLeft;
-
-// Clique nas setas
-arrowBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const cardWidth = carousel.querySelector(".card").offsetWidth + 16; // largura + gap
-        carousel.scrollLeft += btn.id === "left" ? -cardWidth : cardWidth;
-    });
-});
+let autoplayTimer;
+let pointerIsOver = false;
+let hasKeyboardFocus = false;
 
 // Arraste com o mouse
 const dragStart = (e) => {
@@ -32,8 +27,10 @@ const dragStop = () => {
 };
 
 
-setInterval(() => {
+function advanceCarousel() {
     const card = carousel.querySelector(".card");
+    if (!card) return;
+
     const cardWidth = card.offsetWidth + 16;
 
     // Verifica se estamos no final (com margem de erro)
@@ -52,12 +49,36 @@ setInterval(() => {
             behavior: "smooth"
         });
     }
-}, 5000);
+}
 
+function startAutoplay() {
+    clearInterval(autoplayTimer);
+    if (reducedMotion.matches || pointerIsOver || hasKeyboardFocus) return;
+    autoplayTimer = setInterval(advanceCarousel, 5000);
+}
+
+carousel.addEventListener("mouseenter", () => {
+    pointerIsOver = true;
+    startAutoplay();
+});
+carousel.addEventListener("mouseleave", () => {
+    pointerIsOver = false;
+    startAutoplay();
+});
+carousel.addEventListener("focusin", () => {
+    hasKeyboardFocus = true;
+    startAutoplay();
+});
+carousel.addEventListener("focusout", event => {
+    if (!(event.relatedTarget instanceof Node) || !carousel.contains(event.relatedTarget)) {
+        hasKeyboardFocus = false;
+        startAutoplay();
+    }
+});
+reducedMotion.addEventListener("change", startAutoplay);
+startAutoplay();
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
-
-

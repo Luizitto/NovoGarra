@@ -6,34 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Produtos de Nutrição Animal">
     <title>Garra Nutrição Animal | Produtos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="produtos.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="icon" href="./src/img/logopagina.PNG" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <img src="./src/img/logo.PNG" class="img-logo" alt="logo-da-empresa">
-        <img src="./src/img/icon-menu.png" id="menu-hambuguer" alt="icone-menu">
+        <button type="button" id="menu-hambuguer" aria-label="Abrir menu" aria-expanded="false">
+            <img src="./src/img/Icones/icon-menu.png" alt="">
+        </button>
         <nav class="nav-bar">
             <a href="index.html" data-aos="fade-down">Home</a>
-            <a href="./src/img/Portfólio de Produtos final.pdf" download data-aos="fade-down">Download Portifolio
+            <a href="./src/img/Produtos/Portfólio de Produtos final.pdf" download data-aos="fade-down">Download Portifolio
                 Completo</a>
         </nav>
     </header>
 
-    <div class="filtros">
+    <div class="filtros" data-aos="fade-up">
         <button class="ativo" data-filtro="todos">Todos</button>
         <button data-filtro="lactacao">Lactação</button>
         <button data-filtro="preparto">Pré-Parto</button>
         <button data-filtro="recria">Recria</button>
-        <button data-filtro="outros">Outras Espécies</button>
     </div>
 
     <div class="produtos">
-        <div class="product-card lactacao">
-            <img src="./src/img/produtogarra.JPG" alt="Produto-garra">
+        <div class="product-card lactacao" data-aos="fade-up">
+            <img src="./src/img/Produtos/produtogarra.JPG" alt="Produto-garra">
             <div class="card-info">
                 <h3>Núcleo Garra <span> Lac Essencial</span></h3>
                 <ul>
@@ -41,12 +48,11 @@
                     <li>Consumo: 300 gramas</li>
                     <li>Vitaminas: A, D, E</li>
                 </ul>
-                <button onclick="abrirModal('modal1')">Ver Especificações</button>
             </div>
         </div>
 
-        <div class="product-card lactacao">
-            <img src="./src/img/produtogarra.JPG" alt="Produto-garra">
+        <div class="product-card lactacao" data-aos="fade-up" data-aos-delay="100">
+            <img src="./src/img/Produtos/produtogarra.JPG" alt="Produto-garra">
             <div class="card-info">
                 <h3>Núcleo Garra <span>Lac Desempenho</span></h3>
                 <ul>
@@ -54,12 +60,11 @@
                     <li>Consumo: 500 a 600 gramas</li>
                     <li>Vitaminas: A, D, E</li>
                 </ul>
-                <button onclick="abrirModal('modal1')">Ver Especificações</button>
             </div>
         </div>
 
-        <div class="product-card lactacao">
-            <img src="./src/img/produtogarra.JPG" alt="Produto-garra">
+        <div class="product-card lactacao" data-aos="fade-up" data-aos-delay="200">
+            <img src="./src/img/Produtos/produtogarra.JPG" alt="Produto-garra">
             <div class="card-info">
                 <h3>Núcleo Garra <span>Lac Extreme </span> </h3>
                 <ul>
@@ -72,8 +77,8 @@
         </div>
 
 
-        <div class="product-card preparto">
-            <img src="./src/img/produtogarra.JPG" alt="Produto-garra">
+        <div class="product-card preparto" data-aos="fade-up" data-aos-delay="300">
+            <img src="./src/img/Produtos/produtogarra.JPG" alt="Produto-garra">
             <div class="card-info">
                 <h3 class="prep">Núcleo Garra <span>Pré-Parto Extreme</span> </h3>
                 <ul>
@@ -85,8 +90,8 @@
             </div>
         </div>
 
-        <div class="product-card preparto">
-            <img src="./src/img/produtogarra.JPG" alt="Produto-garra">
+        <div class="product-card preparto" data-aos="fade-up" data-aos-delay="400">
+            <img src="./src/img/Produtos/produtogarra.JPG" alt="Produto-garra">
             <div class="card-info">
                 <h3 class="prep">Núcleo Garra <span>Vacas Secas</span></h3>
                 <ul>
@@ -94,12 +99,11 @@
                     <li>Consumo: 150 gramas</li>
                     <li>Vitaminas: A, D, E</li>
                 </ul>
-                <button onclick="abrirModal('modal2')">Ver Especificações</button>
             </div>
         </div>
 
-        <div class="product-card recria">
-            <img src="./src/img/produtogarra.JPG" alt="Produto-garra">
+        <div class="product-card recria" data-aos="fade-up" data-aos-delay="500">
+            <img src="./src/img/Produtos/produtogarra.JPG" alt="Produto-garra">
             <div class="card-info">
                 <h3>Prolac Start 22</h3>
                 <ul>
@@ -110,15 +114,14 @@
             </div>
         </div>
 
-        <div class="product-card recria">
-            <img src="./src/img/produtogarra.JPG" alt="Produto-garra">
+        <div class="product-card recria" data-aos="fade-up" data-aos-delay="600">
+            <img src="./src/img/Produtos/produtogarra.JPG" alt="Produto-garra">
             <div class="card-info">
                 <h3>Núcleo Garra Crescimento</h3>
                 <ul>
                     <li>Recria</li>
                     <li>Vitaminas: A, D, E</li>
                 </ul>
-                <button onclick="abrirModal('modal3')">Ver Especificações</button>
             </div>
         </div>
     </div>
@@ -172,4 +175,13 @@
     </footer>
 
     <script src="./produtos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 750,
+            easing: 'ease-out-cubic',
+            offset: 70,
+            once: true
+        });
+    </script>
 </body>

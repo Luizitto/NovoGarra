@@ -4,7 +4,6 @@ const morphSlider = document.querySelector('.morph-slider');
 if (morphSlider) {
     const canvas = morphSlider.querySelector('.morph-slider-canvas');
     const stage = morphSlider.querySelector('.morph-slider-stage');
-    const caption = morphSlider.querySelector('.morph-slider-caption-text');
     const dots = [...morphSlider.querySelectorAll('.morph-slider-dot')];
     const previousButton = morphSlider.querySelector('.morph-slider-btn-prev');
     const nextButton = morphSlider.querySelector('.morph-slider-btn-next');
@@ -19,7 +18,10 @@ if (morphSlider) {
         image.src = source;
         return image;
     });
-    const autoplayDelay = Number(morphSlider.dataset.autoplay) || 10000;
+    const configuredAutoplayDelay = Number(morphSlider.dataset.autoplay);
+    const autoplayDelay = Number.isFinite(configuredAutoplayDelay) && configuredAutoplayDelay > 0
+        ? configuredAutoplayDelay
+        : 10000;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let currentIndex = 0;
     let autoplayTimer;
@@ -28,6 +30,8 @@ if (morphSlider) {
     let transitionFrom = 0;
     let transitionTo = 0;
     let pointerStartX = null;
+    let pointerIsOver = false;
+    let hasKeyboardFocus = false;
 
     function drawImage(image, opacity = 1) {
         if (!image.complete || !image.naturalWidth) return;
@@ -67,14 +71,12 @@ if (morphSlider) {
     }
 
     function updateControls() {
+        stage.setAttribute('aria-label', `Banner ${currentIndex + 1} de ${slides.length}`);
         dots.forEach((dot, index) => {
             const active = index === currentIndex;
             dot.classList.toggle('is-active', active);
             dot.setAttribute('aria-current', active ? 'true' : 'false');
         });
-        caption.textContent = slides[currentIndex].text;
-        caption.classList.remove('is-active');
-        requestAnimationFrame(() => caption.classList.add('is-active'));
     }
 
     function showSlide(index, restartAutoplay = true) {
@@ -92,11 +94,19 @@ if (morphSlider) {
 
     function startAutoplay() {
         clearTimeout(autoplayTimer);
-        autoplayTimer = setTimeout(() => showSlide(currentIndex + 1, false), autoplayDelay);
+        if (reducedMotion.matches || pointerIsOver || hasKeyboardFocus) return;
+
+        autoplayTimer = setTimeout(() => {
+            showSlide(currentIndex + 1, false);
+            startAutoplay();
+        }, autoplayDelay);
     }
 
-    function pauseAndResumeAutoplay() {
+    function pauseAutoplay() {
         clearTimeout(autoplayTimer);
+    }
+
+    function resumeAutoplay() {
         startAutoplay();
     }
 
@@ -116,8 +126,25 @@ if (morphSlider) {
         if (Math.abs(distance) > 45) showSlide(currentIndex + (distance < 0 ? 1 : -1));
         pointerStartX = null;
     });
-    morphSlider.addEventListener('mouseenter', pauseAndResumeAutoplay);
-    morphSlider.addEventListener('mouseleave', startAutoplay);
+    morphSlider.addEventListener('mouseenter', () => {
+        pointerIsOver = true;
+        pauseAutoplay();
+    });
+    morphSlider.addEventListener('mouseleave', () => {
+        pointerIsOver = false;
+        resumeAutoplay();
+    });
+    morphSlider.addEventListener('focusin', () => {
+        hasKeyboardFocus = true;
+        pauseAutoplay();
+    });
+    morphSlider.addEventListener('focusout', event => {
+        if (!(event.relatedTarget instanceof Node) || !morphSlider.contains(event.relatedTarget)) {
+            hasKeyboardFocus = false;
+            resumeAutoplay();
+        }
+    });
+    reducedMotion.addEventListener('change', startAutoplay);
     window.addEventListener('resize', resizeCanvas);
     images.forEach(image => image.addEventListener('load', resizeCanvas, { once: true }));
     updateControls();
@@ -126,9 +153,6 @@ if (morphSlider) {
 }
 
 
-let lastScroll = 0;
-const header = document.querySelector('header');
-
 document.addEventListener('DOMContentLoaded', function () {
     const menuHamburguer = document.getElementById('menu-hambuguer');
     const navBar = document.querySelector('.nav-bar');
@@ -136,15 +160,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (menuHamburguer && navBar) {
         menuHamburguer.addEventListener('click', function () {
-            navBar.classList.toggle('active');
+            const isExpanded = navBar.classList.toggle('active');
+            menuHamburguer.setAttribute('aria-expanded', String(isExpanded));
+            menuHamburguer.setAttribute('aria-label', isExpanded ? 'Fechar menu' : 'Abrir menu');
         });
 
         navLinks.forEach(link => {
             link.addEventListener('click', function () {
                 navBar.classList.remove('active');
-                console.log('Link clicado, menu fechado');
+                menuHamburguer.setAttribute('aria-expanded', 'false');
+                menuHamburguer.setAttribute('aria-label', 'Abrir menu');
             });
         });
+    }
+
+    const counters = document.querySelectorAll('.servicos-resultado [data-count]');
+    const numberFormatter = new Intl.NumberFormat('pt-BR');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function animateCounter(counter) {
+        const target = Number(counter.dataset.count);
+        if (!Number.isFinite(target)) {
+            console.error('Valor inválido no contador de resultados.', counter);
+            return;
+        }
+
+        if (reducedMotion.matches) {
+            counter.textContent = `+${numberFormatter.format(target)}`;
+            return;
+        }
+
+        const duration = 1800;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const easedProgress = 1 - (1 - progress) ** 3;
+            const currentValue = Math.round(target * easedProgress);
+            counter.textContent = `+${numberFormatter.format(currentValue)}`;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            }
+        }
+
+        counter.textContent = '+0';
+        requestAnimationFrame(updateCounter);
+    }
+
+    if (counters.length) {
+        if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+            counters.forEach(animateCounter);
+        } else {
+            const counterObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.35 });
+
+            counters.forEach(counter => counterObserver.observe(counter));
+        }
     }
 
     // Funcionalidade do botão "Ler Mais"
@@ -171,6 +249,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const sobreVideo = document.querySelector('.sobre-video-section .sobre-video');
 
     if (sobreVideo) {
+        const canPlayOnHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+            && !reducedMotion.matches;
         const playSobreVideo = function () {
             const playRequest = sobreVideo.play();
 
@@ -183,14 +263,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        sobreVideo.addEventListener('pointerenter', playSobreVideo);
-        sobreVideo.addEventListener('pointerleave', function () {
-            sobreVideo.pause();
-        });
-        sobreVideo.addEventListener('focus', playSobreVideo);
-        sobreVideo.addEventListener('blur', function () {
-            sobreVideo.pause();
-        });
+        if (canPlayOnHover) {
+            sobreVideo.addEventListener('pointerenter', playSobreVideo);
+            sobreVideo.addEventListener('pointerleave', function () {
+                sobreVideo.pause();
+            });
+            sobreVideo.addEventListener('focus', playSobreVideo);
+            sobreVideo.addEventListener('blur', function () {
+                sobreVideo.pause();
+            });
+        } else {
+            sobreVideo.controls = true;
+        }
     }
 
     const productPanels = document.querySelectorAll('.accordion-gallery .ag-panel');
@@ -208,4 +292,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-

@@ -2,15 +2,20 @@
     .nav-bar {
         display: none;
         flex-direction: column;
-        background: white;
+        background: var(--color-white);
         position: absolute;
         top: 60px;
         right: 0;
         width: 100vw;
         padding: 10px;
         text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px var(--color-shadow);
         z-index: 1000;
+    }
+
+    #menu-hambuguer img {
+        display: block;
+        width: 100%;
     }
 
     .nav-bar.active {
@@ -21,6 +26,7 @@
         display: block;
         position: relative;
         right: 1rem;
+        height: 30px;
     }
 
     #sobre-nos {
@@ -59,9 +65,8 @@
         width: 90%;
         height: auto;
         border: 1px solid;
-        color: #e1dddd;
-        box-shadow: 0px 2px 5px 3px rgba(102, 102, 102, 0.2);
-        background-color: white;
+        box-shadow: 0px 2px 5px 3px var(--color-shadow-gray);
+        background-color: var(--color-white);
         margin: 0 auto;
         margin-top: 15px;
         margin-bottom: 10px;
@@ -73,6 +78,17 @@
 }
 
 @media (max-width: 520px) {
+    .servicos-resultados {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        gap: 12px;
+        padding: 0 20px;
+    }
+
+    .servicos-resultado {
+        padding: 20px 16px;
+    }
+
     .nossos-produtos {
         padding: 30px 20px;
     }
@@ -153,15 +169,6 @@
     .produtos {
         grid-template-columns: 1fr;
     }
-
-    .txt-video {
-        font-size: 32px;
-    }
-
-    .cont-video p {
-        font-size: 16px;
-    }
-
 
     #sobre-nos .prf-main-container {
         width: 100%;
