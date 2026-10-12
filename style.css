@@ -836,6 +836,7 @@ button {
     transform: scale(1.02) !important;
 }
 
+.txt-serviços h1,
 .txt-serviços h2 {
     font-size: 50px;
 }

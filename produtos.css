@@ -73,6 +73,14 @@ nav a:hover {
     background-color: #eaeaea;
 }
 
+.filtros h1 {
+    width: 100%;
+    margin-bottom: 12px;
+    color: var(--color-forest);
+    font-size: clamp(28px, 4vw, 42px);
+    text-align: center;
+}
+
 .filtros button {
     padding: 0.5rem 1rem;
     border: none;
