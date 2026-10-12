@@ -34,15 +34,17 @@
                 </div>
             </div>
         </div>
-        <button type="button" id="menu-hambuguer" aria-label="Abrir menu" aria-expanded="false">
+        <button type="button" id="menu-hambuguer" aria-label="Abrir menu" aria-expanded="false"
+            aria-controls="nav-principal">
             <img src="./src/img/Icones/icon-menu.png" alt="">
         </button>
-        <nav class="nav-bar">
+        <nav class="nav-bar" id="nav-principal" aria-label="Navegação principal">
             <a href="#home" data-aos="fade-down">Home</a>
             <a href="#serviços" data-aos="fade-down">Nossos Serviços</a>
             <a href="#produtos" data-aos="fade-down">Nossos Produtos</a>
             <a href="#sobre-nos" data-aos="fade-down">Sobre Nós</a>
             <a href="#contate-nos" data-aos="fade-down">Contate-nos</a>
+            <a class="nav-cta" href="https://api.whatsapp.com/send?phone=5531995981646&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Garra." target="_blank" rel="noopener noreferrer">Fale com um especialista</a>
         </nav>
     </header>
 
@@ -120,16 +122,25 @@
         </section>
         <div class="servicos-resultados" aria-label="Resultados da Garra">
             <article class="servicos-resultado" data-aos="fade-up">
-                <strong data-count="100">+100</strong>
-                <h3>Clientes satisfeitos</h3>
+                <img class="servicos-resultado__imagem" src="./src/img/resultados/cliente.png" alt="" aria-hidden="true">
+                <div class="servicos-resultado__conteudo">
+                    <strong data-count="100">+100</strong>
+                    <h3>Clientes satisfeitos</h3>
+                </div>
             </article>
             <article class="servicos-resultado" data-aos="fade-up" data-aos-delay="100">
-                <strong data-count="500">+500</strong>
-                <h3>Fazendas atendidas</h3>
+                <img class="servicos-resultado__imagem" src="./src/img/resultados/campo.png" alt="" aria-hidden="true">
+                <div class="servicos-resultado__conteudo">
+                    <strong data-count="500">+500</strong>
+                    <h3>Fazendas atendidas</h3>
+                </div>
             </article>
             <article class="servicos-resultado" data-aos="fade-up" data-aos-delay="200">
-                <strong data-count="800000">+800.000</strong>
-                <h3>Aumento na produção</h3>
+                <img class="servicos-resultado__imagem" src="./src/img/resultados/gado.png" alt="" aria-hidden="true">
+                <div class="servicos-resultado__conteudo">
+                    <strong data-count="800000">+800.000</strong>
+                    <h3>Aumento na produção</h3>
+                </div>
             </article>
         </div>
     </section>
@@ -348,6 +359,20 @@
             <div class="f-texto">
                 <h2>Garra Nutrição Animal</h2>
                 <p>Juntos Avançamos!</p>
+                <div class="footer-social">
+                    <h3>Acompanhe a Garra</h3>
+                    <div class="footer-social__links">
+                        <a href="https://www.instagram.com/garranutricaoanimal/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram da Garra Nutrição Animal">
+                            <img src="./src/img/Icones/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/company/garra-nutri%C3%A7%C3%A3o-animal/home/"
+                            target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn da Garra Nutrição Animal">
+                            <img src="./src/img/Icones/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <ul class="footer-list">
@@ -355,10 +380,10 @@
                     <h3>Site</h3>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Home</a>
+                    <a href="#home" class="footer-link">Home</a>
                 </li>
                 <li>
-                    <a href="#sobre-nos" class="footer-link">Sobre nos</a>
+                    <a href="#sobre-nos" class="footer-link">Sobre nós</a>
                 </li>
                 <li>
                     <a href="#serviços" class="footer-link">Serviços</a>
@@ -394,7 +419,7 @@
                     <img src="./src/img/Icones/iconemail.png" alt="" />
                     <span><strong>E-mail</strong><br>luizvilela456@gmail.com</span>
                 </a>
-                <a class="footer-contact-link"
+                <a class="footer-contact-link footer-contact-link--whatsapp"
                     href="https://api.whatsapp.com/send?phone=5531995981646&text=Ola%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Garra%21%20">
                     <img src="./src/img/Icones/iconwths.png" alt="" />
                     <span><strong>WhatsApp</strong><br>(31) 9 9598-1646</span>
@@ -405,7 +430,7 @@
 
         <div id="footer_copyright">
             &#169;
-            2026 Garra Nutrição Animal
+            <span id="footer-year"></span> Garra Nutrição Animal
             Todos os Direitos Reservados
         </div>
     </footer>

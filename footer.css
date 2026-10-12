@@ -64,6 +64,19 @@ footer {
     background-color: var(--color-gray-dark);
 }
 
+.footer-contact-link--whatsapp {
+    color: var(--color-white);
+    background-color: rgba(72, 177, 15, 0.16);
+}
+
+.footer-contact-link--whatsapp strong {
+    color: var(--color-white);
+}
+
+.footer-contact-link--whatsapp:hover {
+    background-color: rgba(72, 177, 15, 0.3);
+}
+
 #footer_copyright {
     display: flex;
     justify-content: center;
@@ -77,6 +90,50 @@ footer {
 .f-texto h2, 
 .f-texto p{
     color: var(--color-white);
+}
+
+.footer-social {
+    margin-top: 1.5rem;
+}
+
+.footer-social h3 {
+    margin-bottom: 0.75rem;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+.footer-social__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-social__links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    color: var(--color-neutral-30);
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-social__links a:hover {
+    color: var(--color-white);
+    background-color: var(--color-gray-dark);
+}
+
+.footer-social__links a:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+}
+
+.footer-social__links img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .footer-list h3{

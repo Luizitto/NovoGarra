@@ -154,9 +154,15 @@ if (morphSlider) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+        footerYear.textContent = String(new Date().getFullYear());
+    }
+
     const menuHamburguer = document.getElementById('menu-hambuguer');
     const navBar = document.querySelector('.nav-bar');
     const navLinks = document.querySelectorAll('.nav-bar a');
+    const sectionLinks = [...document.querySelectorAll('.nav-bar a[href^="#"]')];
 
     if (menuHamburguer && navBar) {
         menuHamburguer.addEventListener('click', function () {
@@ -172,6 +178,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 menuHamburguer.setAttribute('aria-label', 'Abrir menu');
             });
         });
+    }
+
+    if ('IntersectionObserver' in window) {
+        const sectionTargets = sectionLinks
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(target => target instanceof HTMLElement);
+
+        const sectionObserver = new IntersectionObserver(entries => {
+            const visibleSections = entries
+                .filter(entry => entry.isIntersecting)
+                .sort((first, second) => first.boundingClientRect.top - second.boundingClientRect.top);
+            const activeSection = visibleSections[0];
+
+            if (!activeSection) return;
+
+            sectionLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${activeSection.target.id}`) {
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }, {
+            rootMargin: '-84px 0px -65% 0px',
+            threshold: 0
+        });
+
+        sectionTargets.forEach(target => sectionObserver.observe(target));
     }
 
     const counters = document.querySelectorAll('.servicos-resultado [data-count]');
